@@ -55,6 +55,14 @@
 		gap: 40px;
 	}
 
+	.page > * {
+		animation: fadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+	}
+
+	.page > *:nth-child(1) { animation-delay: 0.08s; }
+	.page > *:nth-child(2) { animation-delay: 0.16s; }
+	.page > *:nth-child(3) { animation-delay: 0.24s; }
+
 	header h1 {
 		font-size: 28px;
 		font-weight: 700;

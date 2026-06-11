@@ -48,3 +48,36 @@ textarea, input {
 	font-family: var(--font);
 	font-size: 15px;
 }
+
+/* ── Glow orb ─────────────────────────────────────────────────────────── */
+.glow-orb {
+	position: fixed;
+	top: 50%;
+	left: calc(200px + (100vw - 200px) / 2);
+	transform: translate(-50%, -50%);
+	width: 900px;
+	height: 700px;
+	background: radial-gradient(ellipse at center,
+		rgba(245, 166, 35, 0.055) 0%,
+		rgba(245, 166, 35, 0.018) 35%,
+		transparent 65%);
+	pointer-events: none;
+	z-index: 0;
+}
+
+/* ── Entrance keyframes ────────────────────────────────────────────────── */
+@keyframes fadeUp {
+	from { opacity: 0; transform: translateY(18px); }
+	to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+	from { opacity: 0; transform: translateX(-12px); }
+	to   { opacity: 1; transform: translateX(0); }
+}
+
+@media (max-width: 640px) {
+	.glow-orb {
+		left: 50%;
+	}
+}

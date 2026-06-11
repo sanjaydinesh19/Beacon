@@ -9,6 +9,7 @@
 </script>
 
 <div class="shell">
+	<div class="glow-orb" aria-hidden="true"></div>
 	<aside class="sidebar">
 		<div class="logo">
 			<span class="beacon-icon">◈</span>
@@ -48,6 +49,9 @@
 		flex-direction: column;
 		padding: 20px 12px;
 		gap: 6px;
+		animation: slideInLeft 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+		position: relative;
+		z-index: 1;
 	}
 
 	.logo {
@@ -124,6 +128,8 @@
 		flex: 1;
 		overflow-y: auto;
 		padding: 32px 40px;
+		position: relative;
+		z-index: 1;
 	}
 
 	@media (max-width: 640px) {

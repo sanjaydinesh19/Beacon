@@ -1,5 +1,5 @@
 <script lang="ts">
-	type Phase = 'idle' | 'recording' | 'transcribing' | 'review' | 'saving' | 'saved' | 'error';
+	type Phase = 'idle' | 'bt-connecting' | 'recording' | 'transcribing' | 'review' | 'saving' | 'saved' | 'error';
 
 	let phase: Phase = 'idle';
 	let transcript = '';
@@ -14,6 +14,16 @@
 
 	async function startRecording() {
 		errorMsg = '';
+		phase = 'bt-connecting';
+
+		// Switch BT headset to HFP so the browser mic captures real audio.
+		// Silently continues if no BT device is found (falls back to default mic).
+		try {
+			await fetch('/api/journal/bt/hfp', { method: 'POST' });
+		} catch {
+			// Non-fatal — no BT device or PipeWire not available.
+		}
+
 		try {
 			const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
 			mediaRecorder = new MediaRecorder(stream);
@@ -39,6 +49,8 @@
 		mediaRecorder?.stop();
 		mediaRecorder?.stream.getTracks().forEach((t) => t.stop());
 		phase = 'transcribing';
+		// Restore A2DP in the background — don't await, non-blocking.
+		fetch('/api/journal/bt/a2dp', { method: 'POST' }).catch(() => {});
 	}
 
 	async function sendAudio() {
@@ -111,7 +123,7 @@
 				id="entry-date"
 				type="date"
 				bind:value={entryDate}
-				disabled={phase === 'recording' || phase === 'transcribing' || phase === 'saving'}
+				disabled={phase === 'bt-connecting' || phase === 'recording' || phase === 'transcribing' || phase === 'saving'}
 			/>
 		</div>
 
@@ -128,6 +140,12 @@
 				</button>
 				<p class="hint">Tap to start recording</p>
 
+			{:else if phase === 'bt-connecting'}
+				<div class="spinner-wrap">
+					<div class="spinner"></div>
+				</div>
+				<p class="hint">Connecting mic…</p>
+
 			{:else if phase === 'recording'}
 				<button class="mic-btn recording pulse" on:click={stopRecording} aria-label="Stop recording">
 					<svg viewBox="0 0 24 24" fill="currentColor">
@@ -136,7 +154,7 @@
 				</button>
 				<p class="hint recording-hint">
 					<span class="dot"></span>
-					Recording — {fmt(recordDuration)}
+					Recording {fmt(recordDuration)}
 				</p>
 				<p class="sub-hint">Tap to stop</p>
 
@@ -148,7 +166,7 @@
 
 			{:else if phase === 'review'}
 				<div class="transcript-area">
-					<label for="transcript">Transcript — edit before saving</label>
+					<label for="transcript">Edit before saving</label>
 					<textarea id="transcript" bind:value={transcript} rows={10} spellcheck="true"></textarea>
 				</div>
 				<div class="review-actions">
@@ -189,6 +207,13 @@
 		flex-direction: column;
 		gap: 32px;
 	}
+
+	.page > * {
+		animation: fadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+	}
+
+	.page > *:nth-child(1) { animation-delay: 0.08s; }
+	.page > *:nth-child(2) { animation-delay: 0.16s; }
 
 	header h1 {
 		font-size: 26px;

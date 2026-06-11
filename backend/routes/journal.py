@@ -1,5 +1,4 @@
 import subprocess
-import sys
 import tempfile
 from datetime import date
 from pathlib import Path
@@ -9,20 +8,13 @@ from fastapi import APIRouter, File, HTTPException, UploadFile
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
 
-# Load env: Beacon's own .env first, then fall back to Notion Journal's .env
-_BACKEND_ROOT = Path(__file__).parent.parent
-_JOURNAL_ROOT = _BACKEND_ROOT.parent.parent / "Notion Journal"
+load_dotenv(Path(__file__).parent.parent / ".env")
 
-load_dotenv(_BACKEND_ROOT / ".env")
-load_dotenv(_JOURNAL_ROOT / ".env")
-
-# Import directly from the Notion Journal package
-sys.path.insert(0, str(_JOURNAL_ROOT))
-from src.audio import transcribe, bt_switch_hfp, bt_restore_a2dp
-from src.formatter import format_transcript
-from src.notion_api import NotionJournal
-from src.github_backup import JournalBackup
-from src import config
+from notion_journal.audio import transcribe, bt_switch_hfp, bt_restore_a2dp
+from notion_journal.formatter import format_transcript
+from notion_journal.notion_api import NotionJournal
+from notion_journal.github_backup import JournalBackup
+from notion_journal import config
 
 router = APIRouter()
 

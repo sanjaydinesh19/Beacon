@@ -6,7 +6,7 @@ export default defineConfig({
 	server: {
 		allowedHosts: ['beacon', 'omen.taildd3099.ts.net'],
 		proxy: {
-			'/api': 'http://localhost:8000'
+			'/api': process.env.BACKEND_URL ?? 'http://localhost:8000'
 		}
 	}
 });

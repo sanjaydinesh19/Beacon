@@ -1,0 +1,50 @@
+:root {
+	--bg: #0a0a0f;
+	--surface: #12121c;
+	--surface-2: #1a1a28;
+	--border: #2a2a3a;
+	--accent: #f5a623;
+	--accent-dim: #f5a62322;
+	--text: #e2e2e8;
+	--text-muted: #6b6b80;
+	--red: #e05c5c;
+	--green: #5ce08a;
+	--radius: 10px;
+	--font: 'Inter', 'SF Pro Display', system-ui, sans-serif;
+	--font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	height: 100%;
+	background: var(--bg);
+	color: var(--text);
+	font-family: var(--font);
+	font-size: 15px;
+	line-height: 1.6;
+	-webkit-font-smoothing: antialiased;
+}
+
+a {
+	color: var(--accent);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+button {
+	font-family: var(--font);
+	cursor: pointer;
+}
+
+textarea, input {
+	font-family: var(--font);
+	font-size: 15px;
+}

@@ -28,6 +28,13 @@
 					<div class="qc-desc">Record today's entry</div>
 				</div>
 			</a>
+			<a href="/github" class="quick-card activity">
+				<span class="qc-icon">⊙</span>
+				<div>
+					<div class="qc-name">Activity</div>
+					<div class="qc-desc">Latest commits & PRs</div>
+				</div>
+			</a>
 		</div>
 	</section>
 
@@ -109,7 +116,8 @@
 		text-decoration: none;
 	}
 
-	.quick-card.journal .qc-icon {
+	.quick-card.journal .qc-icon,
+	.quick-card.activity .qc-icon {
 		font-size: 26px;
 		color: var(--accent);
 	}

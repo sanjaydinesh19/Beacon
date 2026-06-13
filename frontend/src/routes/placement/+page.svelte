@@ -210,9 +210,9 @@
 			</div>
 			<div class="modal-footer">
 				{#if trackedIds.has(editId)}
-					<button class="btn-ghost" on:click={() => { removeFromTracker(editId!); editId = null; }}>Remove</button>
+					<button class="btn-ghost" on:click={() => { if (editId) removeFromTracker(editId); editId = null; }}>Remove</button>
 				{/if}
-				<button class="btn-primary" on:click={() => saveTracker(editId!, editStatus, editNotes)}>Save</button>
+				<button class="btn-primary" on:click={() => { if (editId) saveTracker(editId, editStatus, editNotes); }}>Save</button>
 			</div>
 		</div>
 	</div>

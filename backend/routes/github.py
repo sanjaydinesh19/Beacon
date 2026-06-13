@@ -2,15 +2,14 @@ import json
 import time
 from datetime import date, datetime, timedelta, timezone
 from fastapi import APIRouter, HTTPException
-from github import Github, GithubException
 import httpx
 from notion_journal import config
 
 router = APIRouter()
 
-# Simple in-memory cache: key → {ts, data}
 _cache: dict = {}
-CONTRIB_TTL = 1800  # 30 min
+ACTIVITY_TTL = 300   # 5 min
+CONTRIB_TTL = 1800   # 30 min
 
 
 def _cached(key: str, ttl: int, fn):
@@ -34,81 +33,109 @@ def _time_ago(dt: datetime) -> str:
 
 
 # ── Activity ────────────────────────────────────────────────────────────────
+# NOTE: The GitHub Events API strips `commits` from PushEvent payloads in
+# recent API versions. We fetch commits directly per-repo instead.
 
 @router.get("/activity")
 def get_activity():
-    try:
-        g = Github(config.require("GITHUB_TOKEN"))
-        auth_user = g.get_user()
-        username = auth_user.login
-        # AuthenticatedUser.get_events() hits /events (network feed, not yours).
-        # NamedUser.get_events() hits /users/{login}/events — your own events.
-        named_user = g.get_user(username)
+    token = config.require("GITHUB_TOKEN")
 
-        items = []
-        for event in named_user.get_events():
-            if len(items) >= 40:
-                break
+    def fetch():
+        hdrs = {
+            "Authorization": f"Bearer {token}",
+            "Accept": "application/vnd.github+json",
+            "X-GitHub-Api-Version": "2022-11-28",
+        }
 
-            repo_full = event.repo.name
-            repo_name = repo_full.split("/", 1)[-1]
-            t = _time_ago(event.created_at)
+        me = httpx.get("https://api.github.com/user", headers=hdrs, timeout=10).json()
+        username = me["login"]
 
-            if event.type == "PushEvent":
-                for commit in event.payload.get("commits", [])[:2]:
-                    msg = commit.get("message", "").split("\n")[0].strip()
-                    sha = commit.get("sha", "")
-                    if not msg or not sha:
-                        continue
-                    items.append({
-                        "type": "commit",
-                        "repo": repo_name,
-                        "repoFull": repo_full,
-                        "title": msg,
-                        "url": f"https://github.com/{repo_full}/commit/{sha}",
-                        "time": t,
-                        "meta": sha[:7],
-                        "number": None,
-                    })
+        raw: list[tuple[datetime, dict]] = []
 
-            elif event.type == "PullRequestEvent":
-                action = event.payload.get("action", "")
-                if action not in ("opened", "closed"):
+        # ── Commits: most recently pushed repos ───────────────────────────
+        repos_resp = httpx.get(
+            "https://api.github.com/user/repos",
+            headers=hdrs,
+            params={"sort": "pushed", "per_page": 8, "affiliation": "owner"},
+            timeout=10,
+        )
+        repos = repos_resp.json() if repos_resp.status_code == 200 else []
+
+        for repo in repos[:8]:
+            repo_name = repo["name"]
+            repo_full = repo["full_name"]
+            c_resp = httpx.get(
+                f"https://api.github.com/repos/{repo_full}/commits",
+                headers=hdrs,
+                params={"author": username, "per_page": 3},
+                timeout=10,
+            )
+            if c_resp.status_code != 200:
+                continue
+            for c in c_resp.json()[:3]:
+                msg = c["commit"]["message"].split("\n")[0].strip()
+                if not msg:
                     continue
-                pr = event.payload.get("pull_request", {})
-                html_url = pr.get("html_url", "")
-                if not html_url:
-                    continue
-                merged = pr.get("merged", False)
-                state = "merged" if (action == "closed" and merged) else action
-                items.append({
+                dt_str = c["commit"]["committer"]["date"]
+                dt = datetime.fromisoformat(dt_str.replace("Z", "+00:00"))
+                raw.append((dt, {
+                    "type": "commit",
+                    "repo": repo_name,
+                    "repoFull": repo_full,
+                    "title": msg,
+                    "url": c["html_url"],
+                    "meta": c["sha"][:7],
+                    "number": None,
+                }))
+
+        # ── PRs ───────────────────────────────────────────────────────────
+        pr_resp = httpx.get(
+            "https://api.github.com/search/issues",
+            headers=hdrs,
+            params={
+                "q": f"author:{username} type:pr",
+                "sort": "created",
+                "order": "desc",
+                "per_page": 15,
+            },
+            timeout=10,
+        )
+        if pr_resp.status_code == 200:
+            for pr in pr_resp.json().get("items", []):
+                repo_full = pr["repository_url"].split("/repos/")[-1]
+                repo_name = repo_full.split("/")[-1]
+                state = pr["state"]
+                if state == "closed" and pr.get("pull_request", {}).get("merged_at"):
+                    state = "merged"
+                dt = datetime.fromisoformat(pr["created_at"].replace("Z", "+00:00"))
+                raw.append((dt, {
                     "type": "pr",
                     "repo": repo_name,
                     "repoFull": repo_full,
-                    "title": pr.get("title", ""),
-                    "url": html_url,
-                    "time": t,
+                    "title": pr["title"],
+                    "url": pr["html_url"],
                     "meta": state,
-                    "number": pr.get("number"),
-                })
+                    "number": pr["number"],
+                }))
 
-        return {"username": username, "items": items[:30]}
+        # Sort by datetime descending, attach relative timestamps
+        raw.sort(key=lambda x: x[0], reverse=True)
+        items = []
+        for dt, d in raw[:30]:
+            d["time"] = _time_ago(dt)
+            items.append(d)
 
-    except GithubException as e:
-        raise HTTPException(status_code=502, detail=str(e))
+        return {"username": username, "items": items}
+
+    try:
+        return _cached("gh_activity", ACTIVITY_TTL, fetch)
+    except HTTPException:
+        raise
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
 
 # ── GitHub Contributions ────────────────────────────────────────────────────
-
-_LEVEL_MAP = {
-    "NONE": 0,
-    "FIRST_QUARTILE": 1,
-    "SECOND_QUARTILE": 2,
-    "THIRD_QUARTILE": 3,
-    "FOURTH_QUARTILE": 4,
-}
 
 _GH_QUERY = """
 query($login: String!) {
@@ -129,14 +156,26 @@ query($login: String!) {
 }
 """
 
+_LEVEL_MAP = {
+    "NONE": 0,
+    "FIRST_QUARTILE": 1,
+    "SECOND_QUARTILE": 2,
+    "THIRD_QUARTILE": 3,
+    "FOURTH_QUARTILE": 4,
+}
+
 
 @router.get("/contributions")
 def get_contributions():
     token = config.require("GITHUB_TOKEN")
 
     def fetch():
-        g = Github(token)
-        username = g.get_user().login
+        me = httpx.get(
+            "https://api.github.com/user",
+            headers={"Authorization": f"Bearer {token}"},
+            timeout=10,
+        ).json()
+        username = me["login"]
 
         resp = httpx.post(
             "https://api.github.com/graphql",
@@ -192,8 +231,7 @@ LEETCODE_USERNAME = "sanjaydinesh"
 def _build_lc_grid(submission_calendar: dict) -> list:
     today = date.today()
     start = today - timedelta(weeks=52)
-    # Roll back to Sunday
-    start -= timedelta(days=(start.weekday() + 1) % 7)
+    start -= timedelta(days=(start.weekday() + 1) % 7)  # roll back to Sunday
 
     weeks = []
     current = start
@@ -233,10 +271,9 @@ def get_leetcode():
         cal = matched["userCalendar"]
         raw = json.loads(cal["submissionCalendar"])
         weeks = _build_lc_grid(raw)
-        total = sum(raw.values())
         return {
             "username": LEETCODE_USERNAME,
-            "total": total,
+            "total": sum(raw.values()),
             "totalActiveDays": cal["totalActiveDays"],
             "streak": cal["streak"],
             "weeks": weeks,

@@ -32,10 +32,22 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": "PPO only. Requires intern at Motorq."
+      "rounds": [
+        "Online Assessment (DSA \u2014 2 problems, LC Medium, 60 min)",
+        "Technical Round 1 (DSA \u2014 arrays, strings, OOP design)",
+        "Technical Round 2 (LLD \u2014 design a small system, OOP principles)",
+        "HR Round (culture fit, internship experience)"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE; PPO converts internship",
+      "topics": [
+        "Arrays",
+        "Strings",
+        "OOP",
+        "LLD",
+        "System Design",
+        "Databases"
+      ],
+      "notes": "PPO only \u2014 requires prior internship at Motorq. Process is relatively relaxed given the relationship from the internship."
     },
     {
       "id": "balkan-id",
@@ -56,10 +68,22 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Technical Assessment (DSA + system design, 75 min)",
+        "Technical Round 1 (DSA \u2014 arrays, trees, graphs)",
+        "Technical Round 2 (System Design \u2014 identity verification or KYC platform)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT",
+      "topics": [
+        "DSA",
+        "System Design",
+        "Identity Verification",
+        "APIs",
+        "OOP",
+        "Security"
+      ],
+      "notes": "Identity verification startup. High CTC for a startup role \u2014 expect a rigorous technical bar. KYC, AML, and digital identity concepts are relevant."
     },
     {
       "id": "google",
@@ -136,7 +160,7 @@
         "System Design",
         "LLD"
       ],
-      "notes": ""
+      "notes": "Zomato/Blinkit has one of the highest bars among Indian product companies. DSA is LC Hard level in OA. System design at Zomato scale (100M+ orders, real-time delivery tracking) is the signature challenge. Quick commerce (Blinkit 10-min delivery) system design is increasingly common."
     },
     {
       "id": "microsoft",
@@ -267,10 +291,23 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems, LC Medium, 90 min)",
+        "Technical Round 1 (DSA \u2014 arrays, strings, trees, OOP)",
+        "Technical Round 2 (System Design + CS fundamentals \u2014 DBMS, Networking)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE",
+      "topics": [
+        "Arrays",
+        "Strings",
+        "Trees",
+        "OOP",
+        "DBMS",
+        "System Design",
+        "Networking"
+      ],
+      "notes": "Virtusa International is a global tech services company. Technical bar is moderate-high. Good DBMS and system design preparation is key."
     },
     {
       "id": "adobe-ppo",
@@ -291,10 +328,23 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (2 DSA problems, LC Medium-Hard, 90 min)",
+        "Technical Round 1 (DSA \u2014 arrays, DP, graphs)",
+        "Technical Round 2 (LLD \u2014 design patterns, OOP)",
+        "Technical Round 3 (System Design)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE",
+      "topics": [
+        "Arrays",
+        "Dynamic Programming",
+        "Graphs",
+        "LLD",
+        "OOP",
+        "System Design"
+      ],
+      "notes": "Adobe PPO is identical to FTE process but offered to top interns. DSA difficulty is high \u2014 expect LC Hard in OA. LLD round focuses on design patterns."
     },
     {
       "id": "intuit-ppo",
@@ -315,10 +365,23 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (2 DSA problems, LC Medium, 75 min)",
+        "Technical Round 1 (DSA \u2014 trees, DP, sliding window)",
+        "Technical Round 2 (LLD \u2014 design a scalable service)",
+        "Technical Round 3 (System Design + CS fundamentals)",
+        "HR Round"
+      ],
+      "eligibility": "8.0+ CGPA, CSE/IT/ECE",
+      "topics": [
+        "Arrays",
+        "Trees",
+        "Dynamic Programming",
+        "LLD",
+        "System Design",
+        "OOP"
+      ],
+      "notes": "Intuit PPO offered to top-rated interns. Expect the same rigor as FTE. System design round tests scalability thinking \u2014 practice LLD for payment/tax systems."
     },
     {
       "id": "intuit",
@@ -353,7 +416,7 @@
         "LLD",
         "OOP"
       ],
-      "notes": ""
+      "notes": "Intuit places heavy emphasis on its \"customer obsession\" culture. LLD and system design are weighted heavily. Questions often involve tax, payments, or small business financial tools. Java/Python proficiency and AWS cloud familiarity are valued."
     },
     {
       "id": "service-now-ppo",
@@ -374,10 +437,24 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (2 DSA problems, LC Medium, 75 min)",
+        "Technical Round 1 (DSA \u2014 graphs, trees, DP)",
+        "Technical Round 2 (LLD \u2014 design a workflow engine or notification service)",
+        "Technical Round 3 (System Design + CS fundamentals)",
+        "HR Round"
+      ],
+      "eligibility": "8.0+ CGPA, CSE/IT/ECE; PPO from ServiceNow internship",
+      "topics": [
+        "Graphs",
+        "Trees",
+        "Dynamic Programming",
+        "LLD",
+        "System Design",
+        "OOP",
+        "DBMS"
+      ],
+      "notes": "ServiceNow PPO conversion rate is ~60% for interns. Strong focus on LLD and enterprise-grade system design. Familiarity with ITSM workflows and REST APIs is valued."
     },
     {
       "id": "okta",
@@ -398,13 +475,23 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [
-        "DSA",
-        "Security Fundamentals"
+      "rounds": [
+        "Online Assessment (2 DSA problems, LC Medium, 60 min)",
+        "Technical Round 1 (DSA \u2014 hashing, graphs, sliding window)",
+        "Technical Round 2 (System Design \u2014 design an auth/identity system)",
+        "Behavioral Round (leadership principles, past projects)"
       ],
-      "notes": "Identity & access management company."
+      "eligibility": "7.5+ CGPA, CSE/IT",
+      "topics": [
+        "Hashing",
+        "Graphs",
+        "Sliding Window",
+        "System Design",
+        "Security Concepts",
+        "OOP",
+        "APIs"
+      ],
+      "notes": "Security and identity knowledge is a plus. System design round often involves auth flows, SSO, OAuth. Prepare security design patterns alongside standard LLD."
     },
     {
       "id": "moveworks",
@@ -459,10 +546,23 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems, LC Medium, 90 min)",
+        "Technical Round 1 (DSA \u2014 arrays, strings, DP)",
+        "Technical Round 2 (System Design \u2014 payment gateway design)",
+        "HR Round (culture fit)"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE; PPO from Visa internship",
+      "topics": [
+        "Arrays",
+        "Strings",
+        "Dynamic Programming",
+        "System Design",
+        "DBMS",
+        "Payment Systems",
+        "Networking"
+      ],
+      "notes": "Finance/payments knowledge is valued. System design questions often involve payment processing, fraud detection, or high-throughput transaction systems."
     },
     {
       "id": "medianet",
@@ -518,10 +618,23 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (2 DSA problems + game-logic puzzle, LC Medium, 90 min)",
+        "Technical Round 1 (DSA \u2014 arrays, graphs, OOP design)",
+        "Technical Round 2 (Game system design or LLD \u2014 game engine components)",
+        "Culture Fit Round (passion for gaming, past projects)"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE",
+      "topics": [
+        "Arrays",
+        "Graphs",
+        "OOP",
+        "LLD",
+        "Game Algorithms",
+        "C++",
+        "Design Patterns"
+      ],
+      "notes": "Genuine passion for gaming is assessed in the culture round. C++ is heavily preferred. Prepare object-oriented game design \u2014 entity-component systems, game loops, collision detection."
     },
     {
       "id": "rubrik",
@@ -589,7 +702,7 @@
         "System Design",
         "Payments Domain"
       ],
-      "notes": ""
+      "notes": "PayPal India hiring is selective with a high bar. Payment security, fraud detection, and global transaction processing system design are signature topics. Strong Java and distributed systems knowledge is expected."
     },
     {
       "id": "marvell-ppo",
@@ -610,10 +723,25 @@
       "domain": [
         "Hardware"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + digital logic + 1 coding problem, 90 min)",
+        "Technical Round 1 (Digital Design \u2014 FSM, timing analysis, Verilog)",
+        "Technical Round 2 (Computer Architecture \u2014 pipelining, cache, memory hierarchy)",
+        "Technical Round 3 (VLSI \u2014 CMOS design, signal integrity basics)",
+        "HR Round"
+      ],
+      "eligibility": "8.0+ CGPA, ECE/EEE/CSE (hardware track)",
+      "topics": [
+        "Digital Design",
+        "Verilog",
+        "FSM",
+        "Computer Architecture",
+        "Pipelining",
+        "VLSI",
+        "CMOS",
+        "RTL Design"
+      ],
+      "notes": "PPO from Marvell internship. Extremely hardware-focused \u2014 know RTL design, synthesis, and verification. Digital design depth is tested more than coding. Strong CGPA bar."
     },
     {
       "id": "phonepe",
@@ -649,7 +777,7 @@
         "Databases",
         "OOP"
       ],
-      "notes": ""
+      "notes": "PhonePe is one of India's largest UPI platforms (500M+ users). System design at UPI scale \u2014 high-throughput transaction processing, reconciliation, and fraud detection \u2014 are commonly asked. Deep distributed systems and fintech knowledge is valued."
     },
     {
       "id": "commvault",
@@ -673,10 +801,25 @@
         "SDE",
         "QA"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": "Data protection/cloud company."
+      "rounds": [
+        "Online Assessment (2 DSA problems, LC Medium, 75 min)",
+        "Technical Round 1 (DSA \u2014 trees, graphs, dynamic programming)",
+        "Technical Round 2 (System Design \u2014 distributed backup and recovery system)",
+        "Technical Round 3 (CS fundamentals \u2014 OS, storage, file systems)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE",
+      "topics": [
+        "Trees",
+        "Graphs",
+        "Dynamic Programming",
+        "System Design",
+        "Distributed Systems",
+        "Storage",
+        "File Systems",
+        "OS"
+      ],
+      "notes": "Data protection and backup software company. Distributed storage and file system knowledge is valuable. Know how deduplication, incremental backup, and disaster recovery work."
     },
     {
       "id": "nvidia",
@@ -697,10 +840,25 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 1-2 coding problems, LC Medium, 90 min)",
+        "Technical Round 1 (Computer Architecture \u2014 GPU architecture, cache, memory)",
+        "Technical Round 2 (DSA or CUDA/C++ depending on role \u2014 SDE vs Hardware)",
+        "Technical Round 3 (System Design or Digital Design)",
+        "HR Round"
+      ],
+      "eligibility": "8.0+ CGPA, CSE/ECE/EEE",
+      "topics": [
+        "Computer Architecture",
+        "GPU Architecture",
+        "CUDA",
+        "C++",
+        "Digital Design",
+        "Memory Hierarchy",
+        "Parallel Computing",
+        "DSA"
+      ],
+      "notes": "Role-dependent \u2014 SDE track tests C++ and DSA heavily; hardware track focuses on GPU architecture and digital design. Very competitive. Expect questions on parallelism, SIMD, and memory."
     },
     {
       "id": "tanx-fi",
@@ -721,10 +879,23 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Technical Assessment (DSA + algorithmic trading problem, 75 min)",
+        "Technical Round 1 (DSA \u2014 arrays, heaps, sorting for trading systems)",
+        "Technical Round 2 (System Design \u2014 low-latency trading platform)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT",
+      "topics": [
+        "Arrays",
+        "Heaps",
+        "Sorting",
+        "System Design",
+        "Low Latency",
+        "Algorithms",
+        "Fintech Concepts"
+      ],
+      "notes": "Crypto/DeFi trading startup. Low-latency and high-throughput system design is central. Know order book algorithms, matching engines, and market microstructure basics."
     },
     {
       "id": "arm-embedded",
@@ -745,10 +916,26 @@
       "domain": [
         "Hardware"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + embedded C + digital logic, 90 min)",
+        "Technical Round 1 (Embedded Systems \u2014 ARM architecture, memory map, interrupts, RTOS)",
+        "Technical Round 2 (Computer Architecture \u2014 pipelining, cache, instruction set)",
+        "Technical Round 3 (Digital Design \u2014 Verilog/VHDL basics, FSM)",
+        "HR Round"
+      ],
+      "eligibility": "8.0+ CGPA, ECE/EEE/CSE (embedded track)",
+      "topics": [
+        "Embedded C",
+        "ARM Architecture",
+        "RTOS",
+        "Interrupts",
+        "Pipelining",
+        "Cache",
+        "Digital Design",
+        "Verilog",
+        "Memory Management"
+      ],
+      "notes": "Arm has a very strong hardware focus. Know ARM Cortex-M architecture intimately. Expect bare-metal programming questions and architecture trade-offs. C++ knowledge helps."
     },
     {
       "id": "ringcentral",
@@ -769,10 +956,23 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (2 DSA problems, LC Medium, 75 min)",
+        "Technical Round 1 (DSA \u2014 graphs, trees, sliding window)",
+        "Technical Round 2 (System Design \u2014 design a messaging/VoIP system)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE",
+      "topics": [
+        "Graphs",
+        "Trees",
+        "Sliding Window",
+        "System Design",
+        "Networking",
+        "OOP",
+        "Distributed Systems"
+      ],
+      "notes": "UCaaS background \u2014 networking and real-time communication system design is common. Prepare WebRTC, SIP basics, and scalable messaging system design."
     },
     {
       "id": "deliveroo",
@@ -793,10 +993,22 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (2 DSA problems, LC Medium, 75 min)",
+        "Technical Round 1 (DSA \u2014 graphs, dynamic programming, optimization)",
+        "Technical Round 2 (System Design \u2014 design food delivery dispatch)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT",
+      "topics": [
+        "Graphs",
+        "Dynamic Programming",
+        "Greedy",
+        "System Design",
+        "Geospatial Algorithms",
+        "OOP"
+      ],
+      "notes": "Location-based routing and dispatch system design is commonly tested. Think about real-time order assignment, surge pricing algorithms, and geospatial indexing."
     },
     {
       "id": "morgan-stanley",
@@ -817,10 +1029,24 @@
       "domain": [
         "Finance"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + quantitative reasoning + 2 coding problems, 90 min)",
+        "Technical Round 1 (DSA \u2014 arrays, sorting, DP)",
+        "Technical Round 2 (CS fundamentals \u2014 DBMS, OS, Networking + finance basics)",
+        "HR Round (finance background, motivation)"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE; finance interest preferred",
+      "topics": [
+        "Arrays",
+        "Sorting",
+        "Dynamic Programming",
+        "DBMS",
+        "OS",
+        "Networking",
+        "Finance Basics",
+        "OOP"
+      ],
+      "notes": "Finance and banking knowledge is expected. The quantitative reasoning section in OA is non-trivial. Brush up on time value of money, risk, and basic derivatives."
     },
     {
       "id": "cisco-ppo",
@@ -841,10 +1067,25 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + DSA + networking MCQ, 90 min)",
+        "Technical Round 1 (DSA \u2014 graphs, BFS/DFS, dynamic programming)",
+        "Technical Round 2 (Networking \u2014 OSI model, TCP/IP, routing protocols)",
+        "Technical Round 3 (System Design \u2014 design a scalable network service)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE; PPO from Cisco internship",
+      "topics": [
+        "Graphs",
+        "BFS/DFS",
+        "Dynamic Programming",
+        "Networking",
+        "TCP/IP",
+        "Routing Protocols",
+        "System Design",
+        "OSI Model"
+      ],
+      "notes": "PPO process mirrors FTE. Networking fundamentals are heavily tested regardless of SDE role. Know TCP handshake, BGP, OSPF basics, and SDN concepts."
     },
     {
       "id": "cisco",
@@ -865,10 +1106,24 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + digital electronics + coding, 90 min)",
+        "Technical Round 1 (Digital Design \u2014 combinational/sequential logic, Verilog)",
+        "Technical Round 2 (Networking Hardware \u2014 ASIC design, packet processing, switching fabrics)",
+        "Technical Round 3 (Computer Architecture \u2014 pipelining, memory, network protocols)",
+        "HR Round"
+      ],
+      "eligibility": "8.0+ CGPA, ECE/EEE/CSE (hardware track)",
+      "topics": [
+        "Digital Design",
+        "Verilog",
+        "VLSI",
+        "Networking Hardware",
+        "ASIC Design",
+        "Computer Architecture",
+        "Packet Processing"
+      ],
+      "notes": "Cisco hardware role focused on network ASICs and switching. Know Verilog/SystemVerilog, digital design for networking (switching fabrics, packet classifiers). Deep hardware knowledge required."
     },
     {
       "id": "cisco-hw",
@@ -889,14 +1144,25 @@
       "domain": [
         "Hardware"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [
-        "VLSI",
-        "Digital Design",
-        "Networking"
+      "rounds": [
+        "Online Assessment (aptitude + digital electronics + coding, 90 min)",
+        "Technical Round 1 (Digital Design \u2014 combinational/sequential logic, Verilog)",
+        "Technical Round 2 (Networking Hardware \u2014 ASIC design, packet processing, switching)",
+        "Technical Round 3 (Computer Architecture \u2014 pipelining, memory, network protocols)",
+        "HR Round"
       ],
-      "notes": "Hardware-specific role, different from Cisco SWE."
+      "eligibility": "8.0+ CGPA, ECE/EEE/CSE (hardware)",
+      "topics": [
+        "Digital Design",
+        "Verilog",
+        "VLSI",
+        "Networking Hardware",
+        "ASIC Design",
+        "Computer Architecture",
+        "Packet Processing",
+        "Pipelining"
+      ],
+      "notes": "Hardware role focused on network ASICs. Know Verilog/SystemVerilog, digital design for networking (switching fabrics, packet classifiers). Deep hardware knowledge required."
     },
     {
       "id": "bny-mellon-ppo",
@@ -917,10 +1183,23 @@
       "domain": [
         "Finance"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + quantitative + 2 coding problems, 90 min)",
+        "Technical Round 1 (DSA \u2014 arrays, sorting, hashing)",
+        "Technical Round 2 (CS fundamentals \u2014 DBMS, OOP, finance systems)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE; finance interest; PPO from BNY Mellon internship",
+      "topics": [
+        "Arrays",
+        "Sorting",
+        "Hashing",
+        "DBMS",
+        "OOP",
+        "Finance Systems",
+        "System Design"
+      ],
+      "notes": "BNY Mellon is a custodian bank focused on asset servicing. Interview includes finance operations context. Know transaction systems, settlement, and clearing house concepts."
     },
     {
       "id": "wells-fargo-ppo",
@@ -941,10 +1220,23 @@
       "domain": [
         "Finance"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + quantitative reasoning + 2 coding problems, 90 min)",
+        "Technical Round 1 (DSA \u2014 arrays, strings, DP)",
+        "Technical Round 2 (CS fundamentals + banking systems \u2014 DBMS, System Design)",
+        "HR Round (motivation for banking tech)"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE; PPO from Wells Fargo internship",
+      "topics": [
+        "Arrays",
+        "Strings",
+        "Dynamic Programming",
+        "DBMS",
+        "System Design",
+        "Banking Systems",
+        "OOP"
+      ],
+      "notes": "Banking tech focus. System design questions involve payment processing, account management, and fraud detection. Finance domain knowledge is a differentiator."
     },
     {
       "id": "wells-fargo",
@@ -980,7 +1272,7 @@
         "Python",
         "Statistics"
       ],
-      "notes": ""
+      "notes": "Wells Fargo Banking tech focus. System design questions involve payment processing, account management, and fraud detection. Finance domain knowledge is a differentiator. PPO from Wells Fargo internship."
     },
     {
       "id": "sap-labs-ppo",
@@ -1001,10 +1293,25 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems, LC Medium, 90 min)",
+        "Technical Round 1 (DSA \u2014 arrays, trees, dynamic programming)",
+        "Technical Round 2 (LLD + OOP \u2014 design an ERP module or service)",
+        "Technical Round 3 (DBMS + System Design)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE; PPO from SAP Labs internship",
+      "topics": [
+        "Arrays",
+        "Trees",
+        "Dynamic Programming",
+        "LLD",
+        "OOP",
+        "DBMS",
+        "System Design",
+        "ERP Concepts"
+      ],
+      "notes": "SAP Labs PPO offered to top interns. Enterprise SaaS background \u2014 ABAP or Java knowledge from internship helps. Expect questions on ERP modules and enterprise architecture."
     },
     {
       "id": "couchbase",
@@ -1025,10 +1332,25 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": "NoSQL database company."
+      "rounds": [
+        "Online Assessment (2 DSA problems, LC Medium, 75 min)",
+        "Technical Round 1 (DSA \u2014 trees, hashing, graphs)",
+        "Technical Round 2 (Distributed systems + databases \u2014 NoSQL design, consistency)",
+        "Technical Round 3 (System Design \u2014 scalable data store)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT",
+      "topics": [
+        "Trees",
+        "Hashing",
+        "Graphs",
+        "Distributed Systems",
+        "NoSQL Databases",
+        "System Design",
+        "Consistency Models",
+        "OOP"
+      ],
+      "notes": "Database and distributed systems depth is essential. Know CAP theorem, eventual consistency, and NoSQL vs SQL trade-offs. Couchbase is a NoSQL company \u2014 know their product."
     },
     {
       "id": "playsimple-games",
@@ -1049,10 +1371,23 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (DSA + game logic problem, LC Medium, 75 min)",
+        "Technical Round 1 (DSA \u2014 arrays, graphs, backtracking)",
+        "Technical Round 2 (LLD/Game design \u2014 design a word game system)",
+        "HR Round (gaming passion, portfolio)"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT/ECE",
+      "topics": [
+        "Arrays",
+        "Graphs",
+        "Backtracking",
+        "OOP",
+        "Game Algorithms",
+        "LLD",
+        "C++"
+      ],
+      "notes": "Casual gaming company. Game design sensibility and OOP skills matter. Backtracking for puzzle-type problems is common. Having personal game projects is a strong differentiator."
     },
     {
       "id": "workindia",
@@ -1075,10 +1410,23 @@
         "SDE",
         "Data"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (2 DSA problems, LC Medium, 60 min)",
+        "Technical Round 1 (DSA + problem solving)",
+        "Technical Round 2 (LLD + System Design)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT",
+      "topics": [
+        "Arrays",
+        "Strings",
+        "Sorting",
+        "LLD",
+        "System Design",
+        "OOP",
+        "DBMS"
+      ],
+      "notes": "Early-stage startup process \u2014 rounds are flexible. Cultural fit and product thinking matter. Expect to discuss how you'd build job-matching features at scale."
     },
     {
       "id": "synopsys",
@@ -1100,13 +1448,26 @@
         "SDE",
         "Hardware"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [
-        "DSA",
-        "EDA concepts"
+      "rounds": [
+        "Online Assessment (aptitude + digital logic + 1-2 coding problems, 90 min)",
+        "Technical Round 1 (Digital Design \u2014 RTL design, timing closure, Verilog/SystemVerilog)",
+        "Technical Round 2 (VLSI \u2014 synthesis, STA, DFT basics)",
+        "Technical Round 3 (Algorithms or EDA tool concepts \u2014 for SDE roles)",
+        "HR Round"
       ],
-      "notes": "EDA tools company. Relevant for VLSI/chip design interest."
+      "eligibility": "8.0+ CGPA, ECE/EEE/CSE",
+      "topics": [
+        "Digital Design",
+        "Verilog",
+        "SystemVerilog",
+        "RTL Design",
+        "VLSI",
+        "Static Timing Analysis",
+        "Synthesis",
+        "C++",
+        "Algorithms"
+      ],
+      "notes": "Synopsys is an EDA company. Hardware design roles need strong Verilog and VLSI flow knowledge. SDE roles building EDA tools need C++ and algorithms. Know the IC design flow end-to-end."
     },
     {
       "id": "nutanix-2",
@@ -1129,14 +1490,25 @@
       "domain": [
         "Hardware"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [
-        "VLSI",
-        "Embedded C",
-        "Analog circuits"
+      "rounds": [
+        "Online Assessment (aptitude + digital electronics + embedded C, 90 min)",
+        "Technical Round 1 (Digital Design \u2014 FSM, Verilog, timing analysis)",
+        "Technical Round 2 (Embedded Systems \u2014 microcontrollers, RTOS, device drivers)",
+        "Technical Round 3 (Computer Architecture \u2014 pipelining, cache, bus protocols)",
+        "HR Round"
       ],
-      "notes": "Semiconductor company. Very relevant for robotics students."
+      "eligibility": "8.0+ CGPA, ECE/EEE/CSE (embedded track)",
+      "topics": [
+        "Digital Design",
+        "Verilog",
+        "Embedded C",
+        "RTOS",
+        "Microcontrollers",
+        "Computer Architecture",
+        "Bus Protocols",
+        "Pipelining"
+      ],
+      "notes": "NXP makes automotive and IoT chips. Expect automotive Ethernet, CAN, and functional safety (ISO 26262) concepts. Strong embedded systems background essential."
     },
     {
       "id": "walmart",
@@ -1190,10 +1562,25 @@
       "domain": [
         "Hardware"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + technical \u2014 digital logic + 1 coding problem, 90 min)",
+        "Technical Round 1 (Algorithms + DSA for semiconductor process control)",
+        "Technical Round 2 (Embedded Systems + Computer Vision basics or Digital Design)",
+        "Technical Round 3 (Domain-specific \u2014 semiconductor metrology concepts)",
+        "HR Round"
+      ],
+      "eligibility": "8.0+ CGPA, CSE/ECE/EEE",
+      "topics": [
+        "DSA",
+        "Algorithms",
+        "Embedded Systems",
+        "Computer Vision Basics",
+        "Digital Design",
+        "C++",
+        "Image Processing",
+        "Semiconductor Concepts"
+      ],
+      "notes": "KLA makes semiconductor process control equipment. Role can be SDE or hardware depending on team. C++ and image/signal processing knowledge is a plus for inspection software roles."
     },
     {
       "id": "tekion",
@@ -1214,10 +1601,24 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (2 DSA problems, LC Medium, 75 min)",
+        "Technical Round 1 (DSA \u2014 arrays, trees, DP)",
+        "Technical Round 2 (LLD \u2014 design an automotive dealer management module)",
+        "Technical Round 3 (System Design + CS fundamentals)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE",
+      "topics": [
+        "Arrays",
+        "Trees",
+        "Dynamic Programming",
+        "LLD",
+        "System Design",
+        "OOP",
+        "DBMS"
+      ],
+      "notes": "Cloud-native automotive SaaS \u2014 design questions often involve dealer inventory, CRM, or service management. Strong LLD round; practice design patterns thoroughly."
     },
     {
       "id": "tessell",
@@ -1238,10 +1639,23 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Technical Assessment (DSA + cloud/systems problem, 60 min)",
+        "Technical Round 1 (DSA \u2014 trees, graphs, sliding window)",
+        "Technical Round 2 (System Design \u2014 design a managed database service)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT",
+      "topics": [
+        "Trees",
+        "Graphs",
+        "Sliding Window",
+        "System Design",
+        "Cloud Computing",
+        "Distributed Databases",
+        "OOP"
+      ],
+      "notes": "DBaaS startup \u2014 expect deep cloud and database questions. Know AWS RDS, multi-tenant architecture, failover, and backup concepts. Very technical interview."
     },
     {
       "id": "human-resocia",
@@ -1262,10 +1676,24 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": "Japan-based role. Requires relocation."
+      "rounds": [
+        "Online Assessment (aptitude + 1-2 coding problems, 60 min)",
+        "Technical Round 1 (DSA \u2014 arrays, strings, basic OOP)",
+        "Technical Round 2 (DBMS + OOP \u2014 database design, Java/Python questions)",
+        "Japanese Communication/Culture Round",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT/ECE; Japanese language basics are a plus",
+      "topics": [
+        "Arrays",
+        "Strings",
+        "OOP",
+        "DBMS",
+        "Java",
+        "Python",
+        "Basic Algorithms"
+      ],
+      "notes": "Japanese IT staffing and software company. Process is relatively accessible compared to product companies. Japanese language (N5/N4 level) and willingness to relocate to Japan is evaluated."
     },
     {
       "id": "samsung-semi",
@@ -1287,10 +1715,26 @@
         "SDE",
         "Hardware"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + digital electronics + 1 coding problem, 90 min)",
+        "Technical Round 1 (Digital Design \u2014 CMOS logic, Verilog, memory design)",
+        "Technical Round 2 (Computer Architecture \u2014 pipelining, cache, memory hierarchy)",
+        "Technical Round 3 (DSA for SDE track or VLSI for hardware track)",
+        "HR Round"
+      ],
+      "eligibility": "8.0+ CGPA, ECE/EEE/CSE; CGPA bar is high",
+      "topics": [
+        "Digital Design",
+        "Verilog",
+        "CMOS",
+        "Memory Design",
+        "Computer Architecture",
+        "Pipelining",
+        "Cache",
+        "DSA",
+        "C++"
+      ],
+      "notes": "Samsung Semiconductors focuses on memory and display chips. Role determines track \u2014 hardware roles need VLSI depth, SDE roles need strong DSA and C++. Very competitive."
     },
     {
       "id": "samsung-research-internship",
@@ -1311,10 +1755,24 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems, LC Medium, 75 min)",
+        "Technical Round 1 (DSA or AI/ML depending on project \u2014 arrays, DP, or ML concepts)",
+        "Technical Round 2 (Project discussion + domain knowledge \u2014 NLP, CV, or embedded)",
+        "HR Round"
+      ],
+      "eligibility": "8.0+ CGPA, CSE/ECE/EEE; strong academic research record",
+      "topics": [
+        "DSA",
+        "Machine Learning",
+        "Deep Learning",
+        "C++",
+        "Python",
+        "Embedded Systems",
+        "Computer Vision",
+        "NLP"
+      ],
+      "notes": "Samsung Research Bangalore internship. Project-aligned hiring \u2014 know your area of interest (AI, embedded, or systems). Publication record or strong projects significantly help."
     },
     {
       "id": "superjoin",
@@ -1335,10 +1793,22 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Technical Assessment (DSA + SQL/data problem, 60 min)",
+        "Technical Round 1 (DSA + product discussion)",
+        "Technical Round 2 (System Design \u2014 data pipeline architecture)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT",
+      "topics": [
+        "Arrays",
+        "SQL",
+        "System Design",
+        "Data Pipelines",
+        "OOP",
+        "APIs"
+      ],
+      "notes": "Data analytics SaaS startup connecting spreadsheets to databases. SQL and data modeling knowledge is a strong plus. Product thinking questions are common."
     },
     {
       "id": "deel",
@@ -1359,10 +1829,23 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (2 DSA problems, LC Medium, 75 min)",
+        "Technical Round 1 (DSA \u2014 arrays, strings, two-pointer)",
+        "Technical Round 2 (System Design \u2014 design a global payroll system)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT",
+      "topics": [
+        "Arrays",
+        "Strings",
+        "Two Pointer",
+        "System Design",
+        "APIs",
+        "OOP",
+        "Distributed Systems"
+      ],
+      "notes": "HR/payroll SaaS operating globally \u2014 system design often involves multi-currency, compliance, and distributed payroll processing. Strong emphasis on product understanding."
     },
     {
       "id": "meesho",
@@ -1383,15 +1866,24 @@
       "domain": [
         "Non-Tech"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [
-        "Analytics",
-        "SQL",
-        "Excel",
-        "Case Studies"
+      "rounds": [
+        "Online Assessment (2 DSA problems, LC Medium, 75 min)",
+        "Technical Round 1 (DSA \u2014 arrays, DP, graphs)",
+        "Technical Round 2 (LLD \u2014 design a product catalogue or order service)",
+        "Technical Round 3 (System Design \u2014 scalable e-commerce platform)",
+        "HR Round"
       ],
-      "notes": "BA role, not SDE."
+      "eligibility": "7.5+ CGPA, CSE/IT",
+      "topics": [
+        "Arrays",
+        "Dynamic Programming",
+        "Graphs",
+        "LLD",
+        "System Design",
+        "OOP",
+        "DBMS"
+      ],
+      "notes": "Fast-growing social commerce platform. System design at Meesho scale (40M+ users) is tested. LLD often involves inventory, order, or seller management. Prep for high-throughput design."
     },
     {
       "id": "siemens-eda-internship",
@@ -1412,10 +1904,24 @@
       "domain": [
         "Hardware"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + digital logic + embedded basics, 90 min)",
+        "Technical Round 1 (EDA/Digital Design \u2014 Verilog, simulation, formal verification)",
+        "Technical Round 2 (Algorithms or Systems \u2014 for tool development roles)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, ECE/EEE/CSE (hardware or EDA track)",
+      "topics": [
+        "Digital Design",
+        "Verilog",
+        "SystemVerilog",
+        "EDA Tools",
+        "Formal Verification",
+        "Algorithms",
+        "C++",
+        "Simulation"
+      ],
+      "notes": "Siemens EDA (formerly Mentor Graphics) hires for tool development and design verification. Know the EDA flow and Questa/ModelSim. Internship often converts to PPO."
     },
     {
       "id": "mufg",
@@ -1436,10 +1942,23 @@
       "domain": [
         "Finance"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + quantitative + 2 coding problems, 90 min)",
+        "Technical Round 1 (DSA \u2014 arrays, hashing, sorting)",
+        "Technical Round 2 (DBMS + banking systems + System Design)",
+        "HR Round (motivation for Japanese banking, cultural fit)"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE; interest in banking technology",
+      "topics": [
+        "Arrays",
+        "Hashing",
+        "Sorting",
+        "DBMS",
+        "System Design",
+        "Banking Systems",
+        "OOP"
+      ],
+      "notes": "Japanese megabank \u2014 cultural fit and communication skills matter alongside technical. Questions often involve banking operations like FX, payments, and treasury systems. Basic finance knowledge expected."
     },
     {
       "id": "saviynt",
@@ -1460,10 +1979,25 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": "Cloud security company."
+      "rounds": [
+        "Online Assessment (2 DSA problems, LC Medium, 60 min)",
+        "Technical Round 1 (DSA \u2014 graphs, trees, BFS/DFS)",
+        "Technical Round 2 (System Design \u2014 identity governance platform design)",
+        "Technical Round 3 (Security + Cloud \u2014 IAM concepts, access control)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT",
+      "topics": [
+        "Graphs",
+        "Trees",
+        "BFS/DFS",
+        "System Design",
+        "IAM",
+        "Cloud Security",
+        "OOP",
+        "Access Control"
+      ],
+      "notes": "Identity governance and administration (IGA) company. IAM concepts (RBAC, ABAC, OAuth, SAML) are helpful. System design often involves access request and certification workflows."
     },
     {
       "id": "valuelabs",
@@ -1484,10 +2018,21 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems, LC Easy-Medium, 75 min)",
+        "Technical Round 1 (DSA + OOP)",
+        "Technical Round 2 (CS fundamentals \u2014 DBMS, Networking, System Design basics)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT/ECE",
+      "topics": [
+        "DSA",
+        "OOP",
+        "DBMS",
+        "Networking",
+        "System Design Basics"
+      ],
+      "notes": "IT services and product engineering company. Moderate technical bar. Focus on solid fundamentals."
     },
     {
       "id": "voxela-ppo",
@@ -1508,10 +2053,23 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Technical Assessment (real-world coding problem, 60 min)",
+        "Technical Round 1 (DSA + system design for industrial IoT)",
+        "Technical Round 2 (Computer Vision or Embedded Systems \u2014 depending on role)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/ECE; PPO from Voxela internship",
+      "topics": [
+        "DSA",
+        "Computer Vision",
+        "Embedded Systems",
+        "IoT",
+        "C++",
+        "System Design",
+        "Machine Learning"
+      ],
+      "notes": "Voxela is an AI/computer vision startup for industrial safety. PPO only. Computer vision, edge inference, and IoT knowledge is central to the role."
     },
     {
       "id": "jpmorgan",
@@ -1568,10 +2126,24 @@
       "domain": [
         "Finance"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + quantitative reasoning + 2 coding problems + finance MCQ, 90 min)",
+        "Technical Round 1 (DSA \u2014 arrays, sorting, hashing, basic DP)",
+        "Technical Round 2 (CS fundamentals + finance basics \u2014 DBMS, OOP, time value of money)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE; finance interest",
+      "topics": [
+        "Arrays",
+        "Sorting",
+        "Hashing",
+        "Dynamic Programming",
+        "DBMS",
+        "OOP",
+        "Finance Basics",
+        "Quantitative Reasoning"
+      ],
+      "notes": "Same process as JP Morgan FTE but for intern role. Finance aptitude section is significant. Know basic investment banking concepts, portfolio theory, and market risk basics."
     },
     {
       "id": "oracle",
@@ -1594,20 +2166,25 @@
         "SDE"
       ],
       "rounds": [
-        "Online Assessment",
-        "Technical Round 1",
-        "Technical Round 2 (CS + DBMS focus)",
-        "HR"
+        "Online Assessment (aptitude + 2 coding problems, LC Medium, 90 min)",
+        "Technical Round 1 (DSA \u2014 trees, graphs, hashing, DP)",
+        "Technical Round 2 (DBMS + System Design \u2014 Oracle DB internals, query optimization)",
+        "Technical Round 3 (CS fundamentals \u2014 OS, Networking, OOP)",
+        "HR Round"
       ],
-      "eligibility": "Open",
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE",
       "topics": [
-        "DSA",
+        "Trees",
+        "Graphs",
+        "Hashing",
+        "Dynamic Programming",
         "DBMS",
         "SQL",
+        "System Design",
         "OS",
-        "Networks"
+        "OOP"
       ],
-      "notes": "Strong focus on DBMS and OS in interviews."
+      "notes": "Oracle India hires for database engineering and cloud. Deep DBMS knowledge (indexing, transactions, ACID, query planning) is a strong differentiator. Know Oracle Cloud (OCI) vs AWS basics."
     },
     {
       "id": "cloudera",
@@ -1629,14 +2206,26 @@
         "SDE",
         "Data"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [
-        "DSA",
-        "Distributed Systems",
-        "Hadoop basics"
+      "rounds": [
+        "Online Assessment (2-3 DSA problems, LC Medium-Hard, 90 min)",
+        "Technical Round 1 (DSA \u2014 graphs, DP, trees)",
+        "Technical Round 2 (Distributed Systems + Big Data \u2014 Hadoop, Spark, HDFS internals)",
+        "Technical Round 3 (System Design \u2014 data platform at scale)",
+        "HR Round"
       ],
-      "notes": ""
+      "eligibility": "8.0+ CGPA, CSE/IT",
+      "topics": [
+        "Graphs",
+        "Dynamic Programming",
+        "Trees",
+        "Distributed Systems",
+        "Apache Hadoop",
+        "Apache Spark",
+        "HDFS",
+        "System Design",
+        "Big Data"
+      ],
+      "notes": "Cloudera is a big data platform company. Deep Hadoop ecosystem knowledge expected. Know YARN, MapReduce, Spark internals, Hive, and HBase. High bar \u2014 similar to Databricks difficulty."
     },
     {
       "id": "sabre",
@@ -1659,10 +2248,25 @@
         "SDE",
         "Data"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": "Travel technology company."
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems, LC Medium, 75 min)",
+        "Technical Round 1 (DSA \u2014 trees, graphs, sliding window)",
+        "Technical Round 2 (System Design \u2014 airline reservation or hotel booking system)",
+        "Technical Round 3 (CS fundamentals \u2014 DBMS, OOP, APIs)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE",
+      "topics": [
+        "Trees",
+        "Graphs",
+        "Sliding Window",
+        "System Design",
+        "DBMS",
+        "OOP",
+        "APIs",
+        "Distributed Systems"
+      ],
+      "notes": "Global Travel Technology company. System design revolves around travel (airline reservation systems, GDS architecture). Know about inventory management, booking flows, and airline tariff systems."
     },
     {
       "id": "blackrock",
@@ -1687,18 +2291,25 @@
         "Finance"
       ],
       "rounds": [
-        "Online Assessment",
-        "Technical Round 1",
-        "Technical Round 2",
-        "HR"
+        "Online Assessment (aptitude + quantitative reasoning + 2 coding problems + finance MCQ, 90 min)",
+        "Technical Round 1 (DSA \u2014 arrays, sorting, DP, graph algorithms)",
+        "Technical Round 2 (Quantitative + CS \u2014 probability, statistics, finance models + System Design)",
+        "Technical Round 3 (Domain round \u2014 portfolio management, risk, or Aladdin platform)",
+        "HR Round"
       ],
-      "eligibility": "Open",
+      "eligibility": "8.0+ CGPA, CSE/IT/ECE/Mathematics; strong quantitative background",
       "topics": [
-        "DSA",
-        "Finance basics",
+        "Arrays",
+        "Dynamic Programming",
+        "Graph Algorithms",
+        "System Design",
+        "Probability",
+        "Statistics",
+        "Portfolio Theory",
+        "Risk Management",
         "Python"
       ],
-      "notes": "World's largest asset manager. Finance background helps."
+      "notes": "BlackRock's Aladdin platform manages $21T+ in assets. Very high bar for quant and finance knowledge. Know Modern Portfolio Theory, VaR, and factor models. Python and financial data analysis skills are critical."
     },
     {
       "id": "optum-ppo",
@@ -1719,10 +2330,26 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems, LC Medium, 90 min)",
+        "Technical Round 1 (DSA \u2014 arrays, trees, graphs, DP)",
+        "Technical Round 2 (System Design \u2014 healthcare data platform or claims processing)",
+        "Technical Round 3 (CS fundamentals + healthcare domain \u2014 OOP, DBMS, HL7/FHIR basics)",
+        "HR Round"
+      ],
+      "eligibility": "8.0+ CGPA, CSE/IT/ECE; PPO from Optum/UnitedHealth internship",
+      "topics": [
+        "Arrays",
+        "Trees",
+        "Graphs",
+        "Dynamic Programming",
+        "System Design",
+        "OOP",
+        "DBMS",
+        "Healthcare IT",
+        "HL7/FHIR"
+      ],
+      "notes": "Optum is the tech arm of UnitedHealth Group. PPO is competitive \u2014 top interns only. Healthcare IT knowledge (HL7, FHIR, EMR systems) differentiates candidates. High CTC for healthcare domain."
     },
     {
       "id": "optum",
@@ -1754,7 +2381,7 @@
         "DSA",
         "Java/.NET"
       ],
-      "notes": ""
+      "notes": "Optum (UnitedHealth Group tech arm) has a very high bar. Healthcare IT knowledge (HL7, FHIR, EMR systems) differentiates candidates. System design often involves claims processing, care management, and health data interoperability at massive scale."
     },
     {
       "id": "databricks",
@@ -1777,19 +2404,25 @@
         "Data"
       ],
       "rounds": [
-        "Online Assessment (2-3 coding problems)",
-        "Technical Round 1",
-        "Technical Round 2 (System Design for data systems)",
-        "Team Fit"
+        "Online Assessment (2-3 DSA problems, LC Medium-Hard, 90 min)",
+        "Technical Round 1 (DSA \u2014 advanced graphs, DP, heaps)",
+        "Technical Round 2 (System Design \u2014 distributed data processing pipeline)",
+        "Technical Round 3 (Data Engineering + Distributed Systems \u2014 Spark internals, Delta Lake)",
+        "HR Round"
       ],
-      "eligibility": "Open",
+      "eligibility": "8.0+ CGPA, CSE/IT",
       "topics": [
-        "DSA",
+        "Graphs",
+        "Dynamic Programming",
+        "Heaps",
+        "System Design",
         "Distributed Systems",
-        "SQL",
-        "Spark basics"
+        "Apache Spark",
+        "Delta Lake",
+        "Big Data",
+        "Streaming"
       ],
-      "notes": "Data & AI platform. ML/data background helpful."
+      "notes": "Very competitive \u2014 among the hardest processes in Super Dream tier. Deep distributed systems and big data knowledge expected. Know Spark internals, Lakehouse architecture, and data engineering patterns."
     },
     {
       "id": "idfc-bank",
@@ -1810,10 +2443,24 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + quantitative + 2 coding problems, 90 min)",
+        "Technical Round 1 (DSA \u2014 arrays, hashing, sorting)",
+        "Technical Round 2 (DBMS + banking systems + System Design)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE",
+      "topics": [
+        "Arrays",
+        "Hashing",
+        "Sorting",
+        "DBMS",
+        "Banking Systems",
+        "System Design",
+        "OOP",
+        "Core Banking"
+      ],
+      "notes": "One of the fastest growing banks in India. Core banking system design is tested. Know UPI, NEFT/RTGS, loan origination, and account management systems. Strong DBMS is essential."
     },
     {
       "id": "zluri",
@@ -1834,10 +2481,23 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Technical Assessment (DSA + SaaS product problem, 60 min)",
+        "Technical Round 1 (DSA \u2014 arrays, hashing, graphs)",
+        "Technical Round 2 (System Design \u2014 SaaS management platform design)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT",
+      "topics": [
+        "DSA",
+        "System Design",
+        "APIs",
+        "SaaS",
+        "OOP",
+        "OAuth",
+        "Microservices"
+      ],
+      "notes": "SaaS management platform startup. OAuth integrations and API design knowledge is helpful. System design often involves multi-tenant SaaS, app discovery, and spend management."
     },
     {
       "id": "amagi-labs",
@@ -1858,10 +2518,25 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (2 DSA problems, LC Medium, 75 min)",
+        "Technical Round 1 (DSA \u2014 graphs, DP, arrays)",
+        "Technical Round 2 (System Design \u2014 cloud broadcast/media streaming platform)",
+        "Technical Round 3 (CS fundamentals + media tech \u2014 OOP, DBMS, streaming protocols)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE",
+      "topics": [
+        "Graphs",
+        "Dynamic Programming",
+        "Arrays",
+        "System Design",
+        "OOP",
+        "Streaming Protocols",
+        "Cloud",
+        "Media Technology"
+      ],
+      "notes": "Amagi is a cloud broadcast and streaming media company. HLS/DASH streaming, CDN, and broadcast delivery system design knowledge is a strong differentiator."
     },
     {
       "id": "rapido",
@@ -1882,10 +2557,23 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (2 DSA problems, LC Medium, 60 min)",
+        "Technical Round 1 (DSA \u2014 graphs, BFS/DFS, priority queues for routing)",
+        "Technical Round 2 (System Design \u2014 ride dispatch and matching system)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT",
+      "topics": [
+        "Graphs",
+        "BFS/DFS",
+        "Priority Queues",
+        "Greedy",
+        "System Design",
+        "Geospatial Algorithms",
+        "OOP"
+      ],
+      "notes": "Bike taxi startup with rapid growth. Matching and dispatch algorithms (similar to Uber/Ola) are common design topics. Geohashing and real-time location indexing knowledge is useful."
     },
     {
       "id": "hyperface",
@@ -1906,10 +2594,24 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (2 DSA problems, LC Medium, 60 min)",
+        "Technical Round 1 (DSA \u2014 arrays, trees, hashing)",
+        "Technical Round 2 (System Design \u2014 credit card or banking API platform)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT",
+      "topics": [
+        "Arrays",
+        "Trees",
+        "Hashing",
+        "System Design",
+        "Payment Systems",
+        "APIs",
+        "OOP",
+        "Banking APIs"
+      ],
+      "notes": "Fintech startup building credit card infrastructure as a platform. Know card issuance, transaction processing, and banking API design. REST API design and microservices are commonly discussed."
     },
     {
       "id": "citi-ppo",
@@ -1930,10 +2632,24 @@
       "domain": [
         "Finance"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + quantitative + 2 coding problems + finance MCQ, 90 min)",
+        "Technical Round 1 (DSA \u2014 arrays, DP, sorting)",
+        "Technical Round 2 (CS fundamentals + banking systems \u2014 DBMS, OOP, transaction processing)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE; PPO from Citi internship",
+      "topics": [
+        "Arrays",
+        "Dynamic Programming",
+        "Sorting",
+        "DBMS",
+        "OOP",
+        "Banking Systems",
+        "Transaction Processing",
+        "Finance Basics"
+      ],
+      "notes": "Citibank's technology internship converts to PPO. Know core banking operations, SWIFT messaging, and transaction processing. Finance aptitude is assessed in OA."
     },
     {
       "id": "hpe",
@@ -1954,10 +2670,26 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems + networking/cloud MCQ, 90 min)",
+        "Technical Round 1 (DSA \u2014 arrays, trees, graphs)",
+        "Technical Round 2 (System Design + Cloud \u2014 design a distributed storage or compute service)",
+        "Technical Round 3 (CS fundamentals \u2014 OS, Networking, DBMS)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE",
+      "topics": [
+        "Arrays",
+        "Trees",
+        "Graphs",
+        "System Design",
+        "Cloud Computing",
+        "Distributed Systems",
+        "OS",
+        "Networking",
+        "DBMS"
+      ],
+      "notes": "HP Enterprise focuses on enterprise cloud and infrastructure. Know HPE's product lines (GreenLake, ProLiant). Distributed systems and cloud-native design are core topics."
     },
     {
       "id": "hpe-cty-ppo",
@@ -1978,10 +2710,23 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Technical Assessment (DSA + cloud systems problem, 75 min)",
+        "Technical Round 1 (DSA \u2014 trees, graphs, DP)",
+        "Technical Round 2 (System Design \u2014 enterprise cloud service)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE; PPO from HPE CTY internship",
+      "topics": [
+        "Trees",
+        "Graphs",
+        "Dynamic Programming",
+        "System Design",
+        "Cloud Computing",
+        "OOP",
+        "DBMS"
+      ],
+      "notes": "HPE Campus to You (CTY) PPO \u2014 converts top interns. Same technical depth as HPE FTE. Cloud and infrastructure focus."
     },
     {
       "id": "hpe-r-d",
@@ -2002,10 +2747,25 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Technical Assessment (research-oriented problem + DSA, 90 min)",
+        "Technical Round 1 (DSA + algorithms for distributed systems)",
+        "Technical Round 2 (System Design + Research discussion \u2014 distributed computing, ML for infra)",
+        "Technical Round 3 (CS fundamentals \u2014 OS, Networking, Distributed Systems)",
+        "HR Round"
+      ],
+      "eligibility": "8.0+ CGPA, CSE/IT/ECE; research projects or publications are a plus",
+      "topics": [
+        "DSA",
+        "Distributed Systems",
+        "System Design",
+        "Cloud Computing",
+        "OS",
+        "Networking",
+        "Research Methods",
+        "ML for Infrastructure"
+      ],
+      "notes": "HPE R&D role \u2014 research projects and publications significantly help. Expect deeper CS theory questions than regular SDE roles. Distributed systems depth is essential."
     },
     {
       "id": "ion-group",
@@ -2026,10 +2786,24 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems + finance MCQ, 90 min)",
+        "Technical Round 1 (DSA \u2014 arrays, sorting, DP basics)",
+        "Technical Round 2 (CS fundamentals + OOP + finance domain \u2014 trading systems, FIX protocol)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE; finance interest",
+      "topics": [
+        "Arrays",
+        "Sorting",
+        "Dynamic Programming",
+        "OOP",
+        "Finance Systems",
+        "FIX Protocol",
+        "Trading",
+        "DBMS"
+      ],
+      "notes": "ION provides financial trading solutions. FIX protocol knowledge is valued. Questions on electronic trading, order management systems, and matching engines are common."
     },
     {
       "id": "nutanix",
@@ -2051,15 +2825,26 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [
-        "OS",
-        "Linux",
-        "Networking",
-        "DSA"
+      "rounds": [
+        "Online Assessment (2-3 DSA problems, LC Medium-Hard, 90 min)",
+        "Technical Round 1 (DSA \u2014 advanced graphs, DP, segment trees)",
+        "Technical Round 2 (System Design \u2014 hyperconverged infrastructure design)",
+        "Technical Round 3 (Distributed Systems + OS \u2014 consistency, storage, virtualization)",
+        "HR Round"
       ],
-      "notes": "Cloud computing/HCI company. Strong OS and networking focus."
+      "eligibility": "8.0+ CGPA, CSE/IT",
+      "topics": [
+        "Graphs",
+        "Dynamic Programming",
+        "Segment Trees",
+        "System Design",
+        "Distributed Systems",
+        "OS",
+        "Virtualization",
+        "Storage",
+        "HCI"
+      ],
+      "notes": "Nutanix is a cloud computing/HCI company. Very high bar \u2014 DSA is LC Medium-Hard in OA. Know virtualization (hypervisors), distributed storage (Cassandra-like), and cluster management."
     },
     {
       "id": "solar-winds",
@@ -2080,10 +2865,25 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (2 DSA problems, LC Medium, 75 min)",
+        "Technical Round 1 (DSA \u2014 graphs, trees, hash maps)",
+        "Technical Round 2 (System Design + Networking \u2014 design a network monitoring tool)",
+        "Technical Round 3 (CS fundamentals \u2014 OS, Networking)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE",
+      "topics": [
+        "Graphs",
+        "Trees",
+        "Hash Maps",
+        "System Design",
+        "Networking",
+        "SNMP",
+        "OS",
+        "Monitoring Systems"
+      ],
+      "notes": "IT management and observability software. Know SNMP, network monitoring protocols, and observability concepts. Design questions often involve log aggregation, metrics collection, and alerting."
     },
     {
       "id": "gap-internship",
@@ -2104,10 +2904,23 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems, LC Easy-Medium, 75 min)",
+        "Technical Round 1 (DSA \u2014 arrays, strings, basic data structures)",
+        "Technical Round 2 (System Design basics + retail tech domain \u2014 inventory, supply chain)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT/ECE",
+      "topics": [
+        "Arrays",
+        "Strings",
+        "Basic Data Structures",
+        "System Design",
+        "OOP",
+        "Retail Technology",
+        "Supply Chain Basics"
+      ],
+      "notes": "Gap Inc. technology internship. Retail domain knowledge (inventory, e-commerce, supply chain) is a plus. Technical bar is accessible for internship."
     },
     {
       "id": "greyorange",
@@ -2129,10 +2942,26 @@
         "Robotics",
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + DSA + robotics/algorithms, 90 min)",
+        "Technical Round 1 (DSA \u2014 graphs, BFS/DFS, shortest path algorithms)",
+        "Technical Round 2 (Robotics algorithms \u2014 path planning, task scheduling, fleet management)",
+        "Technical Round 3 (System Design or Embedded Systems \u2014 for respective roles)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/ECE/Robotics; robotics projects preferred",
+      "topics": [
+        "Graphs",
+        "BFS/DFS",
+        "Shortest Path",
+        "Path Planning",
+        "Task Scheduling",
+        "Fleet Management",
+        "C++",
+        "ROS",
+        "Embedded Systems"
+      ],
+      "notes": "Warehouse robotics and AI \u2014 strongly prefers students with robotics project experience. Path planning algorithms (A*, Dijkstra, RRT) and fleet coordination are central topics."
     },
     {
       "id": "addverb-technologies",
@@ -2154,10 +2983,25 @@
         "Robotics",
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + DSA + robotics basics, 90 min)",
+        "Technical Round 1 (DSA + C++ fundamentals)",
+        "Technical Round 2 (Robotics \u2014 ROS, kinematics, motion planning, warehouse automation)",
+        "Technical Round 3 (Embedded Systems or System Design depending on role)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/ECE/Robotics/Mechanical",
+      "topics": [
+        "DSA",
+        "C++",
+        "ROS",
+        "Kinematics",
+        "Motion Planning",
+        "Embedded Systems",
+        "Warehouse Automation",
+        "Path Planning"
+      ],
+      "notes": "Warehouse automation robotics company. ROS experience is highly valued. Kinematics and path planning for AMRs are central. Projects in robotics are a strong differentiator."
     },
     {
       "id": "mercari",
@@ -2178,10 +3022,23 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (2 DSA problems, LC Medium, 75 min)",
+        "Technical Round 1 (DSA \u2014 arrays, trees, sliding window)",
+        "Technical Round 2 (System Design \u2014 C2C marketplace or listing service)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT",
+      "topics": [
+        "Arrays",
+        "Trees",
+        "Sliding Window",
+        "System Design",
+        "OOP",
+        "DBMS",
+        "Marketplace Design"
+      ],
+      "notes": "Japanese C2C marketplace company. System design revolves around marketplace operations \u2014 listing search, seller/buyer matching, and transaction safety. Japanese tech culture context is a plus."
     },
     {
       "id": "zeta",
@@ -2202,10 +3059,26 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (2 DSA problems, LC Medium, 75 min)",
+        "Technical Round 1 (DSA \u2014 arrays, linked lists, hashing, sliding window)",
+        "Technical Round 2 (LLD \u2014 design a payment or card management system)",
+        "Technical Round 3 (System Design \u2014 fintech scale)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT",
+      "topics": [
+        "Arrays",
+        "Linked Lists",
+        "Hashing",
+        "Sliding Window",
+        "LLD",
+        "System Design",
+        "Fintech",
+        "Payment Systems",
+        "OOP"
+      ],
+      "notes": "Banking-tech company building next-gen credit and card platforms. LLD design often involves card lifecycle, transaction processing, or loyalty systems. Know PCI DSS basics."
     },
     {
       "id": "accenture-mc",
@@ -2226,10 +3099,22 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + verbal reasoning, 60 min)",
+        "Group Discussion (current tech/business topic)",
+        "Case Interview Round (business case \u2014 market sizing, problem structuring)",
+        "HR Round (leadership, motivation for consulting)"
+      ],
+      "eligibility": "7.0+ CGPA, any branch",
+      "topics": [
+        "Aptitude",
+        "Verbal Reasoning",
+        "Case Analysis",
+        "Market Sizing",
+        "Business Frameworks",
+        "Communication"
+      ],
+      "notes": "Management Consulting stream \u2014 no DSA. Focus on case interviews and communication. Practice MECE frameworks, Porter's Five Forces, and market entry cases. GD performance matters significantly."
     },
     {
       "id": "kickdrum",
@@ -2250,10 +3135,22 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Technical Assessment (real-world engineering problem, 90 min)",
+        "Technical Round 1 (DSA + system design discussion)",
+        "Technical Round 2 (Full-stack or backend deep dive \u2014 depends on team)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT",
+      "topics": [
+        "DSA",
+        "System Design",
+        "Full Stack Development",
+        "OOP",
+        "APIs",
+        "DBMS"
+      ],
+      "notes": "Engineering consulting startup. Expect practical problem-solving over theory. Full-stack exposure and ability to work across the stack is valued."
     },
     {
       "id": "lek-consulting",
@@ -2274,10 +3171,22 @@
       "domain": [
         "Consulting"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Application Screening + Resume shortlist",
+        "Case Interview Round 1 (market sizing + mini case)",
+        "Case Interview Round 2 (full business case)",
+        "Partner Interview (fit + motivation)"
+      ],
+      "eligibility": "8.0+ CGPA, CSE/any branch; strong academics",
+      "topics": [
+        "Business Cases",
+        "Market Sizing",
+        "Profitability Analysis",
+        "M&A",
+        "Analytical Thinking",
+        "Communication"
+      ],
+      "notes": "Strategy consulting firm \u2014 very selective. Uses case interviews exclusively. Practice Victor Cheng, Case in Point, and LEK-specific case formats. Quantitative aptitude and structured thinking are critical."
     },
     {
       "id": "kinaxis",
@@ -2298,10 +3207,24 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems, LC Medium, 75 min)",
+        "Technical Round 1 (DSA \u2014 arrays, trees, DP)",
+        "Technical Round 2 (System Design \u2014 supply chain planning software)",
+        "Technical Round 3 (CS fundamentals \u2014 DBMS, OOP)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE",
+      "topics": [
+        "Arrays",
+        "Trees",
+        "Dynamic Programming",
+        "System Design",
+        "DBMS",
+        "OOP",
+        "Supply Chain Concepts"
+      ],
+      "notes": "Supply chain SaaS. Design questions often involve demand forecasting, inventory optimization, or production planning. Understanding of ERP/SCM systems is a plus."
     },
     {
       "id": "barclays-ppo",
@@ -2322,10 +3245,24 @@
       "domain": [
         "Finance"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + quantitative + 2 coding problems + finance MCQ, 90 min)",
+        "Technical Round 1 (DSA \u2014 arrays, sorting, hashing, DP)",
+        "Technical Round 2 (CS fundamentals + banking systems \u2014 OOP, DBMS, transaction processing)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE; PPO from Barclays internship",
+      "topics": [
+        "Arrays",
+        "Sorting",
+        "Hashing",
+        "Dynamic Programming",
+        "OOP",
+        "DBMS",
+        "Banking Systems",
+        "Finance Basics"
+      ],
+      "notes": "Barclays India tech center PPO. Investment banking and retail banking knowledge is useful. Know SWIFT, FIX protocol, and trade lifecycle basics for finance round questions."
     },
     {
       "id": "relito",
@@ -2346,10 +3283,22 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Technical Assessment (DSA + product thinking, 60 min)",
+        "Technical Round 1 (DSA \u2014 arrays, graphs, hashing)",
+        "Technical Round 2 (System Design \u2014 marketplace or SaaS product)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT",
+      "topics": [
+        "DSA",
+        "System Design",
+        "APIs",
+        "OOP",
+        "Product Thinking",
+        "DBMS"
+      ],
+      "notes": "Startup role \u2014 emphasis on product thinking and ownership alongside technical skills. Expect founder-led interviews."
     },
     {
       "id": "resmed-technology",
@@ -2370,10 +3319,24 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems + biomedical MCQ, 90 min)",
+        "Technical Round 1 (DSA + C/C++ or Python)",
+        "Technical Round 2 (Embedded Systems or Software Engineering \u2014 healthcare devices, cloud health platform)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/ECE/EEE/Biomedical",
+      "topics": [
+        "DSA",
+        "C/C++",
+        "Python",
+        "Embedded Systems",
+        "Healthcare Technology",
+        "Cloud",
+        "IoT",
+        "FHIR Basics"
+      ],
+      "notes": "ResMed makes sleep apnea devices and digital health software. CPAP device firmware and cloud health data management are central domains. Biomedical engineering context is a plus."
     },
     {
       "id": "luganodes",
@@ -2394,10 +3357,23 @@
       "domain": [
         "Finance"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Technical Assessment (blockchain/crypto + DSA problem, 75 min)",
+        "Technical Round 1 (DSA + distributed systems concepts)",
+        "Technical Round 2 (Blockchain \u2014 consensus mechanisms, validator nodes, staking)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT",
+      "topics": [
+        "DSA",
+        "Blockchain",
+        "Consensus Mechanisms",
+        "Staking",
+        "Distributed Systems",
+        "Crypto Protocols",
+        "Node Operations"
+      ],
+      "notes": "Blockchain infrastructure company running validator nodes. Deep knowledge of Proof of Stake, validator economics, and blockchain node operations is essential."
     },
     {
       "id": "equal",
@@ -2418,10 +3394,23 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Technical Assessment (DSA + fintech problem, 60 min)",
+        "Technical Round 1 (DSA + backend fundamentals)",
+        "Technical Round 2 (System Design \u2014 payments or wealth management platform)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT",
+      "topics": [
+        "DSA",
+        "System Design",
+        "Fintech",
+        "APIs",
+        "OOP",
+        "DBMS",
+        "Payment Systems"
+      ],
+      "notes": "Fintech startup in wealth management. Payment system design and financial API knowledge is relevant."
     },
     {
       "id": "idrive",
@@ -2442,10 +3431,25 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (2 DSA problems, LC Medium, 75 min)",
+        "Technical Round 1 (DSA \u2014 trees, graphs, hashing)",
+        "Technical Round 2 (System Design \u2014 cloud backup and storage platform)",
+        "Technical Round 3 (CS fundamentals \u2014 DBMS, OS, Networking)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT",
+      "topics": [
+        "Trees",
+        "Graphs",
+        "Hashing",
+        "System Design",
+        "Cloud Storage",
+        "Distributed Systems",
+        "OS",
+        "DBMS"
+      ],
+      "notes": "IDrive is a cloud backup SaaS company. System design revolves around distributed file storage, deduplication, versioning, and disaster recovery. Strong OS and distributed storage knowledge helps."
     },
     {
       "id": "thorogood-associates",
@@ -2466,10 +3470,24 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Application Screening + Case Study submission",
+        "Technical Interview (data engineering + analytics \u2014 SQL, Python, Power BI)",
+        "Case Interview (business analytics or data consulting case)",
+        "HR Round (values, communication, consulting fit)"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/Mathematics/Statistics",
+      "topics": [
+        "SQL",
+        "Python",
+        "Data Engineering",
+        "Business Analytics",
+        "Power BI",
+        "Data Visualization",
+        "Consulting Frameworks",
+        "Statistics"
+      ],
+      "notes": "Analytics consulting firm. Strong SQL, Python, and business analytics skills are essential. Case studies are data-driven rather than pure business strategy. Communication and storytelling with data is evaluated."
     },
     {
       "id": "philips",
@@ -2490,10 +3508,26 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems + technical MCQ, 90 min)",
+        "Technical Round 1 (DSA + C++ or Python for respective roles)",
+        "Technical Round 2 (Embedded Systems or Software Engineering \u2014 healthcare devices or health informatics)",
+        "Technical Round 3 (System Design for SDE track)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/ECE/EEE/BME",
+      "topics": [
+        "DSA",
+        "C++",
+        "Python",
+        "Embedded Systems",
+        "System Design",
+        "Healthcare IT",
+        "Image Processing",
+        "OOP",
+        "DICOM Basics"
+      ],
+      "notes": "Philips hires for healthcare technology \u2014 medical devices and health informatics. DICOM (medical imaging standard) and HL7 knowledge helps for informatics roles. Embedded C++ for device firmware roles."
     },
     {
       "id": "sapiens-technologies",
@@ -2514,10 +3548,23 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems, LC Easy-Medium, 75 min)",
+        "Technical Round 1 (DSA + OOP \u2014 Java or C#)",
+        "Technical Round 2 (Insurance domain systems + DBMS + System Design)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT/ECE",
+      "topics": [
+        "DSA",
+        "OOP",
+        "Java",
+        "C#",
+        "DBMS",
+        "Insurance Systems",
+        "System Design"
+      ],
+      "notes": "Sapiens provides software for insurance carriers. Insurance domain knowledge (policy, claims, billing) is a differentiator. Java or C# proficiency is expected."
     },
     {
       "id": "affinsys-ai",
@@ -2539,10 +3586,24 @@
         "AI/ML",
         "Data"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Technical Assessment (AI/ML + coding, 75 min)",
+        "Technical Round 1 (DSA + Python \u2014 ML/NLP focus)",
+        "Technical Round 2 (AI system design \u2014 conversational AI, NLP pipeline)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT/DS",
+      "topics": [
+        "DSA",
+        "Python",
+        "NLP",
+        "Machine Learning",
+        "Conversational AI",
+        "LLMs",
+        "System Design",
+        "APIs"
+      ],
+      "notes": "AI startup focused on conversational AI and NLP. Strong Python and NLP/LLM knowledge is essential. Experience with Transformers, BERT, or GPT APIs is a differentiator."
     },
     {
       "id": "arrise-solutions",
@@ -2563,10 +3624,22 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems, LC Easy-Medium, 75 min)",
+        "Technical Round 1 (DSA + OOP)",
+        "Technical Round 2 (System Design + CS fundamentals)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT/ECE",
+      "topics": [
+        "DSA",
+        "OOP",
+        "System Design",
+        "DBMS",
+        "Networking",
+        "APIs"
+      ],
+      "notes": "Gaming/technology company. Standard SDE interview process with moderate technical bar."
     },
     {
       "id": "bain-cap",
@@ -2620,10 +3693,26 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems + retail/payments MCQ, 90 min)",
+        "Technical Round 1 (DSA \u2014 arrays, trees, hashing)",
+        "Technical Round 2 (System Design \u2014 POS system or digital banking platform)",
+        "Technical Round 3 (CS fundamentals \u2014 OS, Networking, DBMS)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT/ECE",
+      "topics": [
+        "Arrays",
+        "Trees",
+        "Hashing",
+        "System Design",
+        "POS Systems",
+        "Digital Banking",
+        "OOP",
+        "DBMS",
+        "Networking"
+      ],
+      "notes": "NCR Voyix provides commerce technology (ATMs, POS, digital banking). System design often involves payment terminal architecture, ATM network design, or retail checkout systems."
     },
     {
       "id": "niyo-solutions",
@@ -2644,10 +3733,24 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (2 DSA problems, LC Medium, 60 min)",
+        "Technical Round 1 (DSA \u2014 arrays, hashing, sliding window)",
+        "Technical Round 2 (System Design \u2014 neobank or travel money platform)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT",
+      "topics": [
+        "Arrays",
+        "Hashing",
+        "Sliding Window",
+        "System Design",
+        "Fintech",
+        "APIs",
+        "OOP",
+        "DBMS"
+      ],
+      "notes": "Niyo is a neobank focused on blue-collar workers and travel forex. System design around forex, multi-currency wallets, and UPI integration is relevant."
     },
     {
       "id": "ubs",
@@ -2668,10 +3771,24 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + quantitative + 2 coding problems + finance MCQ, 90 min)",
+        "Technical Round 1 (DSA \u2014 arrays, sorting, DP)",
+        "Technical Round 2 (CS fundamentals + finance systems \u2014 OOP, DBMS, derivatives basics)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE; finance interest",
+      "topics": [
+        "Arrays",
+        "Sorting",
+        "Dynamic Programming",
+        "OOP",
+        "DBMS",
+        "Finance",
+        "Derivatives",
+        "System Design"
+      ],
+      "notes": "Swiss investment bank. Finance knowledge (fixed income, derivatives, FX) is expected. The quantitative section of OA tests probability and statistics. Risk management context knowledge helps."
     },
     {
       "id": "zenoti",
@@ -2692,10 +3809,26 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (2 DSA problems, LC Medium, 75 min)",
+        "Technical Round 1 (DSA \u2014 arrays, trees, sliding window, two-pointer)",
+        "Technical Round 2 (LLD \u2014 design a salon booking or POS system)",
+        "Technical Round 3 (System Design + CS fundamentals)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT",
+      "topics": [
+        "Arrays",
+        "Trees",
+        "Sliding Window",
+        "Two Pointer",
+        "LLD",
+        "System Design",
+        "OOP",
+        "DBMS",
+        "SaaS Design"
+      ],
+      "notes": "SaaS company for beauty and wellness industry. LLD is a strong focus \u2014 booking systems, payment processing, POS design. Multi-tenant SaaS architecture is commonly discussed."
     },
     {
       "id": "zs-associates",
@@ -2754,10 +3887,25 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems, LC Medium, 75 min)",
+        "Technical Round 1 (DSA \u2014 graphs, trees, hashing)",
+        "Technical Round 2 (System Design \u2014 compliance archiving and monitoring platform)",
+        "Technical Round 3 (CS fundamentals \u2014 DBMS, Distributed Systems)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT",
+      "topics": [
+        "Graphs",
+        "Trees",
+        "Hashing",
+        "System Design",
+        "Distributed Systems",
+        "Compliance Technology",
+        "DBMS",
+        "OOP"
+      ],
+      "notes": "Smarsh provides compliance archiving for financial communications. System design around high-volume message capture, indexing, and search is central. Regulatory compliance context helps."
     },
     {
       "id": "aditya-birla-capital",
@@ -2778,10 +3926,24 @@
       "domain": [
         "Finance"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + quantitative + 2 coding problems + finance MCQ, 90 min)",
+        "Technical Round 1 (DSA + OOP \u2014 basic to medium)",
+        "Technical Round 2 (DBMS + finance systems \u2014 mutual funds, insurance, lending)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT/ECE; finance domain interest",
+      "topics": [
+        "DSA",
+        "OOP",
+        "DBMS",
+        "Finance Systems",
+        "Mutual Funds",
+        "Insurance",
+        "Lending",
+        "APIs"
+      ],
+      "notes": "Aditya Birla Capital is a financial services conglomerate (NBFC, insurance, AMC). Financial products knowledge (mutual funds, insurance, lending) is assessed. Moderate technical bar."
     },
     {
       "id": "futures-first",
@@ -2835,10 +3997,23 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems + technical MCQ, 90 min)",
+        "Technical Round 1 (DSA + C++ for embedded/systems roles)",
+        "Technical Round 2 (Embedded Systems or System Design depending on role)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/ECE/EEE",
+      "topics": [
+        "DSA",
+        "C++",
+        "Embedded Systems",
+        "OOP",
+        "System Design",
+        "Industrial IoT",
+        "Networking"
+      ],
+      "notes": "Caterpillar India hires for digital and embedded software. IoT and industrial connectivity knowledge is a plus. Construction equipment domain knowledge is not required but appreciated."
     },
     {
       "id": "fidelity-ppo",
@@ -2859,10 +4034,24 @@
       "domain": [
         "Finance"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + quantitative + 2 coding problems + finance MCQ, 90 min)",
+        "Technical Round 1 (DSA \u2014 arrays, trees, DP)",
+        "Technical Round 2 (CS fundamentals + finance systems \u2014 DBMS, OOP, portfolio management)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE; PPO from Fidelity internship",
+      "topics": [
+        "Arrays",
+        "Trees",
+        "Dynamic Programming",
+        "DBMS",
+        "OOP",
+        "Portfolio Management",
+        "Finance Basics",
+        "System Design"
+      ],
+      "notes": "Fidelity Investments (asset management tech). Portfolio management, mutual fund operations, and investment data system design are common topics. Finance knowledge from internship is expected."
     },
     {
       "id": "zanskar-securities",
@@ -2883,10 +4072,26 @@
       "domain": [
         "Finance"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Technical Assessment (quant/algorithmic problem + DSA, 90 min)",
+        "Technical Round 1 (DSA + probability \u2014 arrays, DP, combinatorics)",
+        "Technical Round 2 (Quantitative Finance \u2014 options pricing, market making, statistical arbitrage)",
+        "Technical Round 3 (Coding + Mathematical problem solving in C++ or Python)",
+        "HR Round"
+      ],
+      "eligibility": "8.0+ CGPA, CSE/Mathematics/ECE; strong quant background required",
+      "topics": [
+        "DSA",
+        "Probability",
+        "Statistics",
+        "Options Pricing",
+        "Market Making",
+        "Quantitative Finance",
+        "C++",
+        "Python",
+        "Algorithms"
+      ],
+      "notes": "Proprietary trading/securities firm. Very high quant bar \u2014 expect probability puzzles, options pricing (Black-Scholes), and market microstructure questions. C++ proficiency for low-latency coding is expected."
     },
     {
       "id": "shell",
@@ -2907,10 +4112,23 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding/data problems, 90 min)",
+        "Technical Round 1 (DSA + data structures for analytics)",
+        "Technical Round 2 (System Design or Data Engineering \u2014 energy analytics platform)",
+        "HR Round (motivation for energy sector)"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE; data/analytics interest",
+      "topics": [
+        "DSA",
+        "Python",
+        "Data Analytics",
+        "SQL",
+        "System Design",
+        "Data Engineering",
+        "Energy Concepts"
+      ],
+      "notes": "Shell hires for digital/technology roles in the energy sector. Python and data analytics skills are heavily weighted. Sustainability and energy transition knowledge is a differentiator."
     },
     {
       "id": "british-telecom",
@@ -2931,10 +4149,26 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems + networking MCQ, 90 min)",
+        "Technical Round 1 (DSA \u2014 arrays, graphs, trees)",
+        "Technical Round 2 (Networking + System Design \u2014 telecom network architecture)",
+        "Technical Round 3 (CS fundamentals \u2014 OS, DBMS)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT/ECE",
+      "topics": [
+        "Arrays",
+        "Graphs",
+        "Trees",
+        "Networking",
+        "Telecom Protocols",
+        "System Design",
+        "OOP",
+        "DBMS",
+        "5G Basics"
+      ],
+      "notes": "BT Group technology center. Telecom networking knowledge (5G, NFV, SDN, IP routing) is a differentiator. System design often involves network management and telco service platforms."
     },
     {
       "id": "itron",
@@ -2955,10 +4189,24 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems + IoT/technical MCQ, 90 min)",
+        "Technical Round 1 (DSA + C++ for embedded/IoT roles)",
+        "Technical Round 2 (Embedded Systems + IoT \u2014 smart meters, mesh networking, AMI)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/ECE/EEE",
+      "topics": [
+        "DSA",
+        "C++",
+        "Embedded Systems",
+        "IoT",
+        "Smart Grid",
+        "Mesh Networking",
+        "MQTT",
+        "AMI"
+      ],
+      "notes": "Itron builds smart meters and grid monitoring. IoT protocol knowledge (Zigbee, MQTT, LoRaWAN) is valued. Smart grid and AMI (Advanced Metering Infrastructure) domain understanding helps."
     },
     {
       "id": "kalvium",
@@ -2979,10 +4227,23 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Technical Assessment (coding + product thinking, 60 min)",
+        "Technical Round 1 (DSA + full-stack or backend fundamentals)",
+        "Technical Round 2 (System Design or product discussion)",
+        "HR Round (teaching/mentoring philosophy if education-tech role)"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT",
+      "topics": [
+        "DSA",
+        "Full Stack Development",
+        "System Design",
+        "OOP",
+        "Product Thinking",
+        "APIs",
+        "Education Technology"
+      ],
+      "notes": "EdTech startup focused on engineering education. Passion for education technology and teaching-by-doing is evaluated alongside technical skills. Practical coding emphasis over competitive DSA."
     },
     {
       "id": "thermofisher",
@@ -3003,10 +4264,24 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems + scientific computing MCQ, 90 min)",
+        "Technical Round 1 (DSA + Python/C++)",
+        "Technical Round 2 (System Design or Scientific Computing \u2014 lab automation, data analysis)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT/ECE/Biotech",
+      "topics": [
+        "DSA",
+        "Python",
+        "C++",
+        "System Design",
+        "Scientific Computing",
+        "Data Analysis",
+        "Lab Automation",
+        "OOP"
+      ],
+      "notes": "Life sciences technology company. Scientific data processing and lab automation software roles. Python proficiency and data pipeline experience are valued. Life sciences domain exposure is a plus."
     },
     {
       "id": "amadeus",
@@ -3027,10 +4302,25 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems, LC Medium, 75 min)",
+        "Technical Round 1 (DSA \u2014 graphs, trees, DP, sorting)",
+        "Technical Round 2 (System Design \u2014 airline inventory or GDS architecture)",
+        "Technical Round 3 (CS fundamentals \u2014 OOP, DBMS)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE",
+      "topics": [
+        "Graphs",
+        "Trees",
+        "Dynamic Programming",
+        "System Design",
+        "OOP",
+        "DBMS",
+        "Travel Technology",
+        "GDS"
+      ],
+      "notes": "Amadeus is the world's leading travel technology company. GDS (Global Distribution System) architecture and airline reservation system design are signature topics. SOAP/REST API knowledge helps."
     },
     {
       "id": "commonwealth-bank-australia",
@@ -3051,10 +4341,24 @@
       "domain": [
         "Finance"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + quantitative + 2 coding problems + finance MCQ, 90 min)",
+        "Technical Round 1 (DSA \u2014 arrays, trees, DP)",
+        "Technical Round 2 (CS fundamentals + banking systems \u2014 DBMS, OOP, payment systems)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE; finance interest",
+      "topics": [
+        "Arrays",
+        "Trees",
+        "Dynamic Programming",
+        "DBMS",
+        "OOP",
+        "Banking Systems",
+        "Payment Systems",
+        "Finance Basics"
+      ],
+      "notes": "CBA is one of the largest Australian banks. Australia-specific banking context (NPP fast payments, Australian regulatory framework) is a plus. Core banking and payment system design knowledge is key."
     },
     {
       "id": "dell",
@@ -3075,10 +4379,23 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems, LC Easy-Medium, 90 min)",
+        "Technical Round 1 (DSA \u2014 arrays, strings, OOP)",
+        "Technical Round 2 (CS fundamentals \u2014 OS, Networking, DBMS)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT/ECE",
+      "topics": [
+        "Arrays",
+        "Strings",
+        "OOP",
+        "OS",
+        "Networking",
+        "DBMS",
+        "System Design Basics"
+      ],
+      "notes": "MNC with a broad campus presence. Technical bar is moderate \u2014 solid DSA fundamentals and CS core subjects (OS, DBMS, Networks) are sufficient. Good work-life balance reputation."
     },
     {
       "id": "societe-generale",
@@ -3099,10 +4416,24 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + quantitative + 2 coding problems + finance MCQ, 90 min)",
+        "Technical Round 1 (DSA \u2014 arrays, sorting, hashing, basic DP)",
+        "Technical Round 2 (CS fundamentals + banking systems \u2014 OOP, DBMS, trading platforms)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE; finance interest",
+      "topics": [
+        "Arrays",
+        "Sorting",
+        "Hashing",
+        "OOP",
+        "DBMS",
+        "Trading Systems",
+        "Finance Basics",
+        "FIX Protocol"
+      ],
+      "notes": "French investment bank India tech center. Capital markets knowledge (equities, derivatives) is valued. Questions on market risk, portfolio systems, and trading platform architecture appear."
     },
     {
       "id": "ab-inbev",
@@ -3123,10 +4454,24 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + situational judgment + 1-2 data/coding problems, 90 min)",
+        "Technical Interview (DSA + Python/SQL + data analytics)",
+        "Case Study Round (supply chain, sales, or revenue management analytics problem)",
+        "HR Round (AB InBev values: dream big, make it happen, people are the most important asset)"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT/ECE/Industrial Engineering; analytics interest",
+      "topics": [
+        "DSA",
+        "Python",
+        "SQL",
+        "Data Analytics",
+        "Supply Chain Analytics",
+        "Revenue Management",
+        "Statistics",
+        "Data Visualization"
+      ],
+      "notes": "AB InBev (Anheuser-Busch) global technology center. Focuses on analytics and supply chain optimization for FMCG at massive scale. Python and SQL are more important than DSA. Consumer goods domain knowledge helps."
     },
     {
       "id": "accelerize-360",
@@ -3147,10 +4492,23 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Technical Assessment (DSA + SaaS/marketing tech problem, 60 min)",
+        "Technical Round 1 (DSA + backend fundamentals)",
+        "Technical Round 2 (System Design \u2014 marketing analytics platform)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT",
+      "topics": [
+        "DSA",
+        "System Design",
+        "APIs",
+        "OOP",
+        "Marketing Technology",
+        "Analytics",
+        "DBMS"
+      ],
+      "notes": "MarTech startup. Marketing analytics and attribution system design knowledge is relevant. Practical engineering skills over competitive algorithms."
     },
     {
       "id": "chubb",
@@ -3171,10 +4529,23 @@
       "domain": [
         "Finance"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems + insurance MCQ, 90 min)",
+        "Technical Round 1 (DSA + OOP)",
+        "Technical Round 2 (System Design \u2014 insurance underwriting or claims platform)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT/ECE",
+      "topics": [
+        "DSA",
+        "OOP",
+        "DBMS",
+        "System Design",
+        "Insurance Systems",
+        "APIs",
+        "Microservices"
+      ],
+      "notes": "Chubb is one of the world's largest P&C insurance companies. Insurance domain knowledge (underwriting, claims, reinsurance) is valued alongside standard SDE skills."
     },
     {
       "id": "epsilon",
@@ -3195,10 +4566,26 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems + marketing/data MCQ, 90 min)",
+        "Technical Round 1 (DSA \u2014 arrays, trees, hashing)",
+        "Technical Round 2 (System Design \u2014 data marketing platform or loyalty system)",
+        "Technical Round 3 (CS fundamentals \u2014 DBMS, OOP)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT/ECE",
+      "topics": [
+        "Arrays",
+        "Trees",
+        "Hashing",
+        "System Design",
+        "Data Marketing",
+        "Loyalty Systems",
+        "DBMS",
+        "OOP",
+        "Analytics"
+      ],
+      "notes": "Epsilon is a MarTech company specializing in data-driven marketing and loyalty programs. Customer data platform (CDP) and loyalty system design are common topics. SQL and data skills are valued."
     },
     {
       "id": "ibm-ppo",
@@ -3219,10 +4606,26 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems, LC Easy-Medium, 90 min)",
+        "Technical Round 1 (DSA + OOP \u2014 Java or Python)",
+        "Technical Round 2 (Cloud/AI domain \u2014 IBM Cloud, Watson, or Hybrid Cloud systems)",
+        "Technical Round 3 (System Design + CS fundamentals)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE; PPO from IBM internship",
+      "topics": [
+        "DSA",
+        "OOP",
+        "Java",
+        "Python",
+        "Cloud Computing",
+        "IBM Cloud",
+        "AI/ML",
+        "System Design",
+        "DBMS"
+      ],
+      "notes": "IBM PPO from various India labs/services. IBM Cloud, Red Hat OpenShift, and AI/ML (Watson) domain knowledge from internship is expected. Java is the primary enterprise language at IBM."
     },
     {
       "id": "nova-platform",
@@ -3243,10 +4646,23 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Technical Assessment (DSA + fintech problem, 60 min)",
+        "Technical Round 1 (DSA + backend fundamentals)",
+        "Technical Round 2 (System Design \u2014 financial data platform or analytics)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT",
+      "topics": [
+        "DSA",
+        "System Design",
+        "Fintech",
+        "APIs",
+        "OOP",
+        "DBMS",
+        "Analytics"
+      ],
+      "notes": "Fintech platform startup. Financial data platform and analytics system design is relevant. Startup culture fit and ownership mindset are evaluated."
     },
     {
       "id": "rt-camp",
@@ -3267,10 +4683,24 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Technical Assessment (WordPress/open-source contribution or coding problem, 90 min)",
+        "Technical Round 1 (PHP/JavaScript + open-source fundamentals)",
+        "Technical Round 2 (System Design or plugin architecture discussion)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT; open-source contribution experience strongly preferred",
+      "topics": [
+        "PHP",
+        "JavaScript",
+        "WordPress",
+        "Open Source",
+        "Plugin Architecture",
+        "APIs",
+        "DBMS",
+        "OOP"
+      ],
+      "notes": "RT Camp is a WordPress/open-source company. Prior open-source contributions (especially to WordPress) are a massive differentiator. PHP and JavaScript skills are essential."
     },
     {
       "id": "schneider-electric",
@@ -3291,10 +4721,26 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems + electrical/embedded MCQ, 90 min)",
+        "Technical Round 1 (DSA + C/C++ or Python for embedded/SDE roles)",
+        "Technical Round 2 (Embedded Systems or System Design \u2014 energy management systems, IoT, SCADA)",
+        "Technical Round 3 (Domain round \u2014 smart grid, EV charging, industrial automation)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/ECE/EEE/Electrical",
+      "topics": [
+        "DSA",
+        "C/C++",
+        "Python",
+        "Embedded Systems",
+        "IoT",
+        "SCADA",
+        "Smart Grid",
+        "Industrial Automation",
+        "Energy Management"
+      ],
+      "notes": "Schneider Electric focuses on energy management and industrial automation. IoT, SCADA, and energy efficiency concepts are key. For SDE roles, system design around smart building or EV charging infrastructure is relevant."
     },
     {
       "id": "trademarkia",
@@ -3315,10 +4761,24 @@
       "domain": [
         "Finance"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Technical Assessment (DSA + LegalTech/IP problem, 60 min)",
+        "Technical Round 1 (DSA + full-stack or backend)",
+        "Technical Round 2 (System Design \u2014 IP search and trademark analytics platform)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT",
+      "topics": [
+        "DSA",
+        "System Design",
+        "APIs",
+        "Full Stack",
+        "OOP",
+        "DBMS",
+        "Search Systems",
+        "LegalTech"
+      ],
+      "notes": "LegalTech company specializing in trademark and IP management. Search system design (indexing, ranking, fuzzy matching) and legal domain awareness are useful."
     },
     {
       "id": "verteil",
@@ -3339,10 +4799,24 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems, LC Easy-Medium, 75 min)",
+        "Technical Round 1 (DSA \u2014 arrays, trees, graphs)",
+        "Technical Round 2 (System Design \u2014 airline NDC/offer distribution platform)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT",
+      "topics": [
+        "Arrays",
+        "Trees",
+        "Graphs",
+        "System Design",
+        "Travel Technology",
+        "NDC Standard",
+        "APIs",
+        "OOP"
+      ],
+      "notes": "Verteil is a travel technology startup building NDC (New Distribution Capability) platforms for airlines. NDC standard knowledge and airline offer/order management system design is directly relevant."
     },
     {
       "id": "ziroh-labs",
@@ -3363,10 +4837,24 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Technical Assessment (DSA + cryptography/security problem, 75 min)",
+        "Technical Round 1 (DSA + systems programming \u2014 C/C++/Rust)",
+        "Technical Round 2 (Cryptography + System Design \u2014 confidential computing, homomorphic encryption)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/Mathematics; cryptography knowledge strongly preferred",
+      "topics": [
+        "DSA",
+        "Cryptography",
+        "Systems Programming",
+        "C/C++",
+        "Rust",
+        "Homomorphic Encryption",
+        "Confidential Computing",
+        "Security"
+      ],
+      "notes": "Ziroh Labs works on advanced cryptography and confidential computing. Knowledge of cryptographic primitives, homomorphic encryption, and secure multi-party computation is directly tested."
     },
     {
       "id": "accenture",
@@ -3419,10 +4907,23 @@
       "domain": [
         "Finance"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems, LC Easy-Medium, 75 min)",
+        "Technical Round 1 (DSA + OOP basics)",
+        "Technical Round 2 (System Design \u2014 insurance platform or claims processing)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT/ECE",
+      "topics": [
+        "DSA",
+        "OOP",
+        "DBMS",
+        "System Design",
+        "Insurance Systems",
+        "APIs",
+        "Microservices"
+      ],
+      "notes": "Insurtech arm of Tata group. Claims processing, policy management, and fraud detection system design are relevant topics. Insurance domain knowledge is a plus."
     },
     {
       "id": "exxonmobil-ppo",
@@ -3443,10 +4944,26 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + quantitative + 2 coding/data problems, 90 min)",
+        "Technical Round 1 (DSA + Python/C++ for data science or engineering roles)",
+        "Technical Round 2 (Domain-specific \u2014 petroleum engineering or data science for energy)",
+        "Technical Round 3 (System Design or Analytics \u2014 energy data pipeline)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE/Chemical/Petroleum; PPO from ExxonMobil internship",
+      "topics": [
+        "DSA",
+        "Python",
+        "C++",
+        "Data Science",
+        "Energy Domain",
+        "Petroleum Engineering Basics",
+        "Analytics",
+        "SQL",
+        "System Design"
+      ],
+      "notes": "ExxonMobil PPO \u2014 top interns only. Energy domain knowledge (upstream/downstream oil & gas, reservoir simulation, energy transition) is expected from internship experience."
     },
     {
       "id": "lseg",
@@ -3467,10 +4984,24 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + quantitative + 2 coding problems + finance MCQ, 90 min)",
+        "Technical Round 1 (DSA \u2014 arrays, strings, sorting, DP)",
+        "Technical Round 2 (CS fundamentals + financial markets \u2014 DBMS, OOP, market data systems)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE; finance interest",
+      "topics": [
+        "Arrays",
+        "Strings",
+        "Dynamic Programming",
+        "DBMS",
+        "OOP",
+        "Financial Markets",
+        "Market Data",
+        "FIX Protocol"
+      ],
+      "notes": "London Stock Exchange Group provides market infrastructure and data. Market data feeds, reference data, and trading system design are common topics. Know SETS (order matching) and market microstructure."
     },
     {
       "id": "gigamon",
@@ -3491,10 +5022,25 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems + networking MCQ, 90 min)",
+        "Technical Round 1 (DSA \u2014 graphs, trees, hashing)",
+        "Technical Round 2 (Networking \u2014 deep packet inspection, network visibility, traffic analysis)",
+        "Technical Round 3 (System Design \u2014 network monitoring and analytics platform)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE",
+      "topics": [
+        "Graphs",
+        "Trees",
+        "Hashing",
+        "Networking",
+        "Deep Packet Inspection",
+        "Network Security",
+        "System Design",
+        "OOP"
+      ],
+      "notes": "Gigamon provides network visibility and observability solutions. Deep packet inspection, network traffic analysis, and network security concepts are central to their product."
     },
     {
       "id": "hp",
@@ -3515,10 +5061,23 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems, LC Easy-Medium, 90 min)",
+        "Technical Round 1 (DSA + OOP basics)",
+        "Technical Round 2 (CS fundamentals \u2014 OS, Networking, DBMS)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT/ECE",
+      "topics": [
+        "DSA",
+        "OOP",
+        "OS",
+        "Networking",
+        "DBMS",
+        "C++",
+        "Algorithms"
+      ],
+      "notes": "HP Inc. (printing/PC) hires for software and hardware roles. Technical bar is moderate. OOPS and OS fundamentals are key. C++ knowledge is valued for embedded/driver roles."
     },
     {
       "id": "hyperverge",
@@ -3540,13 +5099,26 @@
         "SDE",
         "AI/ML"
       ],
-      "rounds": [],
-      "eligibility": "Open",
+      "rounds": [
+        "Online Assessment (DSA + ML/vision problem, 75 min)",
+        "Technical Round 1 (DSA + Python \u2014 arrays, DP, ML fundamentals)",
+        "Technical Round 2 (Computer Vision + AI \u2014 OCR, face recognition, document verification)",
+        "Technical Round 3 (System Design \u2014 AI verification platform)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/DS; ML/CV background preferred",
       "topics": [
         "DSA",
-        "ML basics"
+        "Python",
+        "Machine Learning",
+        "Computer Vision",
+        "OCR",
+        "Face Recognition",
+        "Document AI",
+        "System Design",
+        "APIs"
       ],
-      "notes": "AI-powered identity verification startup."
+      "notes": "Hyperverge is an AI company focused on identity verification using computer vision. Strong ML and computer vision skills (CNNs, OCR, face recognition) are directly tested. Python and deep learning framework proficiency is essential."
     },
     {
       "id": "john-deere",
@@ -3568,10 +5140,26 @@
         "Robotics",
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems + embedded/domain MCQ, 90 min)",
+        "Technical Round 1 (DSA + C++ for embedded/SDE roles)",
+        "Technical Round 2 (Embedded Systems or System Design \u2014 precision agriculture, IoT, autonomous machinery)",
+        "Technical Round 3 (Domain round \u2014 agriculture technology, GPS, machine control)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/ECE/EEE/Mechanical",
+      "topics": [
+        "DSA",
+        "C++",
+        "Embedded Systems",
+        "IoT",
+        "GPS/GNSS",
+        "Precision Agriculture",
+        "CAN Bus",
+        "Machine Learning",
+        "System Design"
+      ],
+      "notes": "John Deere India hires for precision agriculture and autonomous machinery software. CAN bus, GPS/GNSS, and machine control system knowledge is very relevant. Agriculture technology domain is unique."
     },
     {
       "id": "salescode-ai",
@@ -3592,10 +5180,24 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Technical Assessment (DSA + AI/ML problem, 60 min)",
+        "Technical Round 1 (DSA + Python \u2014 ML basics)",
+        "Technical Round 2 (AI system design \u2014 sales intelligence platform, CRM analytics)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT/DS",
+      "topics": [
+        "DSA",
+        "Python",
+        "Machine Learning",
+        "NLP",
+        "Sales Analytics",
+        "CRM",
+        "APIs",
+        "System Design"
+      ],
+      "notes": "AI startup focused on sales intelligence and revenue operations. NLP and ML applied to sales data (call analysis, CRM enrichment) is the core domain."
     },
     {
       "id": "dbs",
@@ -3616,10 +5218,25 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + quantitative + 2 coding problems + finance MCQ, 90 min)",
+        "Technical Round 1 (DSA \u2014 arrays, trees, DP)",
+        "Technical Round 2 (CS fundamentals + banking systems \u2014 DBMS, OOP, digital banking)",
+        "HR Round (DBS culture \u2014 'be the best bank for a better world')"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE; finance interest",
+      "topics": [
+        "Arrays",
+        "Trees",
+        "Dynamic Programming",
+        "DBMS",
+        "OOP",
+        "Digital Banking",
+        "APIs",
+        "Finance Basics",
+        "System Design"
+      ],
+      "notes": "DBS Bank (Singapore) India technology hub. Digital banking and API-first banking knowledge is a differentiator. DBS is known for its fintech-forward culture \u2014 show interest in open banking and digital transformation."
     },
     {
       "id": "kyndryl",
@@ -3640,10 +5257,24 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems + cloud/infra MCQ, 90 min)",
+        "Technical Round 1 (DSA + OOP + OS/Networking basics)",
+        "Technical Round 2 (System Design + Cloud \u2014 infrastructure management, hybrid cloud)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT/ECE",
+      "topics": [
+        "DSA",
+        "OOP",
+        "OS",
+        "Networking",
+        "Cloud Computing",
+        "Hybrid Cloud",
+        "System Design",
+        "DBMS"
+      ],
+      "notes": "Kyndryl (IBM infrastructure spinoff) provides managed IT services. Cloud and infrastructure management knowledge is valued. ServiceNow, ITSM, and cloud migration concepts are relevant."
     },
     {
       "id": "conde-nast",
@@ -3664,10 +5295,26 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (2 DSA problems, LC Medium, 75 min)",
+        "Technical Round 1 (DSA \u2014 arrays, trees, sliding window)",
+        "Technical Round 2 (System Design \u2014 digital media platform, content delivery, recommendation)",
+        "Technical Round 3 (CS fundamentals \u2014 OOP, DBMS)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT",
+      "topics": [
+        "Arrays",
+        "Trees",
+        "Sliding Window",
+        "System Design",
+        "Content Delivery",
+        "Recommendation Systems",
+        "OOP",
+        "DBMS",
+        "Media Technology"
+      ],
+      "notes": "Cond\u00e9 Nast India technology hub. Digital media platform design \u2014 content recommendation, A/B testing for editorial, CDN design \u2014 are signature topics. Media domain interest is assessed."
     },
     {
       "id": "sparrow-risk-management",
@@ -3688,10 +5335,24 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Technical Assessment (quant + DSA problem, 75 min)",
+        "Technical Round 1 (DSA + probability/statistics)",
+        "Technical Round 2 (Risk modeling + System Design \u2014 risk analytics platform)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/Mathematics/ECE; finance/risk interest",
+      "topics": [
+        "DSA",
+        "Probability",
+        "Statistics",
+        "Risk Modeling",
+        "System Design",
+        "Python",
+        "Finance",
+        "Analytics"
+      ],
+      "notes": "Risk management firm. Quantitative risk modeling (VaR, Monte Carlo, stress testing) and financial risk concepts are directly tested alongside standard DSA."
     },
     {
       "id": "vcomply",
@@ -3712,10 +5373,23 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Technical Assessment (DSA + GRC problem, 60 min)",
+        "Technical Round 1 (DSA + backend fundamentals)",
+        "Technical Round 2 (System Design \u2014 GRC/compliance management platform)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT",
+      "topics": [
+        "DSA",
+        "System Design",
+        "GRC",
+        "Compliance Technology",
+        "APIs",
+        "OOP",
+        "DBMS"
+      ],
+      "notes": "SaaS startup for Governance, Risk, and Compliance (GRC). GRC domain knowledge (risk assessment, audit management, regulatory compliance) is valued alongside technical skills."
     },
     {
       "id": "uber",
@@ -3736,10 +5410,25 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (2-3 DSA problems, LC Medium-Hard, 90 min)",
+        "Technical Round 1 (DSA \u2014 graphs, DP, heaps, priority queues)",
+        "Technical Round 2 (System Design \u2014 ride matching, surge pricing, or maps)",
+        "Technical Round 3 (CS fundamentals + behavioral)",
+        "HR Round"
+      ],
+      "eligibility": "8.0+ CGPA, CSE/IT",
+      "topics": [
+        "Graphs",
+        "Dynamic Programming",
+        "Heaps",
+        "Priority Queues",
+        "System Design",
+        "Geospatial Algorithms",
+        "Distributed Systems",
+        "OOP"
+      ],
+      "notes": "High bar \u2014 OA has LC Hard level problems. Geospatial algorithms and ride-matching systems are signature design questions. Know Uber's tech stack concepts: maps, geohashing, surge pricing models."
     },
     {
       "id": "zentrades",
@@ -3760,10 +5449,23 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Technical Assessment (DSA + field service/B2B problem, 60 min)",
+        "Technical Round 1 (DSA + full-stack or backend)",
+        "Technical Round 2 (System Design \u2014 field service management platform)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT",
+      "topics": [
+        "DSA",
+        "System Design",
+        "APIs",
+        "OOP",
+        "Full Stack",
+        "DBMS",
+        "Field Service Management"
+      ],
+      "notes": "B2B SaaS startup for trade contractors (HVAC, plumbing, electrical). Field service management system design and practical engineering over competitive algorithms."
     },
     {
       "id": "scienaptic-systems",
@@ -3784,10 +5486,26 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Technical Assessment (ML + DSA problem, 75 min)",
+        "Technical Round 1 (DSA + Python + ML fundamentals)",
+        "Technical Round 2 (AI system design \u2014 credit underwriting platform, ML model deployment)",
+        "Technical Round 3 (Domain round \u2014 credit scoring, lending, alternative data)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/DS/Mathematics; ML background preferred",
+      "topics": [
+        "DSA",
+        "Python",
+        "Machine Learning",
+        "Credit Scoring",
+        "Feature Engineering",
+        "Model Deployment",
+        "MLOps",
+        "SQL",
+        "System Design"
+      ],
+      "notes": "AI-powered credit decisioning company. Credit scoring model design, alternative data usage, and ML model lifecycle knowledge is directly tested. Python and ML proficiency is non-negotiable."
     },
     {
       "id": "boeing-ppo",
@@ -3808,10 +5526,26 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + technical MCQ + 1-2 coding problems, 90 min)",
+        "Technical Round 1 (DSA + C/C++ or Python for software roles; avionics/embedded for hardware)",
+        "Technical Round 2 (Domain-specific \u2014 aerospace software, embedded systems, or data analytics)",
+        "Technical Round 3 (System Design or safety-critical systems discussion)",
+        "HR Round (Boeing values, interest in aerospace)"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/ECE/EEE/Aerospace; PPO from Boeing internship",
+      "topics": [
+        "DSA",
+        "C/C++",
+        "Python",
+        "Embedded Systems",
+        "Avionics",
+        "Safety-Critical Systems",
+        "DO-178C Basics",
+        "System Design",
+        "Aerospace Domain"
+      ],
+      "notes": "Boeing India Engineering (Bangalore) PPO. Safety-critical software development (DO-178C standard), avionics, and aerospace domain knowledge from internship is expected. Security clearance considerations may apply."
     },
     {
       "id": "eurofins",
@@ -3832,10 +5566,24 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems + scientific MCQ, 90 min)",
+        "Technical Round 1 (DSA + Python/Java)",
+        "Technical Round 2 (System Design \u2014 LIMS or scientific data management platform)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT/Biotech/Chemistry",
+      "topics": [
+        "DSA",
+        "Python",
+        "Java",
+        "LIMS",
+        "Scientific Data Management",
+        "System Design",
+        "DBMS",
+        "OOP"
+      ],
+      "notes": "Eurofins is a global bioanalytical testing company. Laboratory Information Management Systems (LIMS) and scientific data pipeline knowledge is directly relevant. Life sciences domain interest is evaluated."
     },
     {
       "id": "pepsico",
@@ -3856,10 +5604,24 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + situational judgment + 1-2 data/coding problems, 90 min)",
+        "Technical Interview (Python + SQL + data analytics \u2014 FMCG supply chain, consumer analytics)",
+        "Case Study Round (retail analytics, supply chain optimization, or revenue management)",
+        "HR Round (PepsiCo leadership model: 'Be Real, Be Better Together, Win Together')"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT/ECE/Industrial Engineering; analytics interest",
+      "topics": [
+        "Python",
+        "SQL",
+        "Data Analytics",
+        "Supply Chain Analytics",
+        "Consumer Analytics",
+        "Statistics",
+        "Data Visualization",
+        "FMCG Domain"
+      ],
+      "notes": "PepsiCo technology center focuses on data analytics, supply chain, and digital transformation for FMCG at scale. Python and SQL are critical. FMCG operations knowledge (route-to-market, trade spend) is a differentiator."
     },
     {
       "id": "rystad-energy",
@@ -3880,10 +5642,25 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + quantitative + data problem, 90 min)",
+        "Technical Interview (Python + SQL + energy data analytics)",
+        "Case Study Round (energy market analysis \u2014 oil & gas demand, renewables transition)",
+        "HR Round (interest in energy consulting)"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/Petroleum/Economics/Mathematics",
+      "topics": [
+        "Python",
+        "SQL",
+        "Data Analytics",
+        "Energy Markets",
+        "Oil & Gas",
+        "Renewables",
+        "Statistics",
+        "Data Visualization",
+        "Financial Modeling"
+      ],
+      "notes": "Rystad is a leading energy research and consulting firm. Strong Python, SQL, and energy market knowledge are essential. Understanding energy value chains (upstream, midstream, downstream) is directly tested."
     },
     {
       "id": "hitwicket",
@@ -3904,10 +5681,24 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Technical Assessment (DSA + game logic problem, 75 min)",
+        "Technical Round 1 (DSA \u2014 arrays, graphs, game algorithms)",
+        "Technical Round 2 (Game design discussion + backend \u2014 cricket game mechanics, simulation logic)",
+        "HR Round (cricket knowledge + gaming passion)"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT; cricket knowledge is a strong plus",
+      "topics": [
+        "DSA",
+        "Game Algorithms",
+        "Arrays",
+        "Graphs",
+        "Game Design Patterns",
+        "OOP",
+        "Backend Development",
+        "Simulation"
+      ],
+      "notes": "Hitwicket is a cricket strategy game company. Cricket domain knowledge and gaming passion are genuinely evaluated. Game simulation algorithms and OOP game design patterns are central."
     },
     {
       "id": "vivriti-capital",
@@ -3928,10 +5719,24 @@
       "domain": [
         "Finance"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + quantitative + 2 coding problems + finance MCQ, 90 min)",
+        "Technical Round 1 (DSA + Python/Java)",
+        "Technical Round 2 (System Design \u2014 debt capital markets platform, credit analytics)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT/ECE; fintech or capital markets interest",
+      "topics": [
+        "DSA",
+        "Python",
+        "Java",
+        "System Design",
+        "Debt Capital Markets",
+        "Credit Analytics",
+        "DBMS",
+        "Finance Basics"
+      ],
+      "notes": "Vivriti Capital operates a debt capital marketplace for mid-market companies. Credit analytics, fixed income, and capital market operations knowledge is directly relevant."
     },
     {
       "id": "analytics-vidya",
@@ -3953,10 +5758,24 @@
         "AI/ML",
         "Data"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Technical Assessment (ML + DSA problem + SQL, 90 min)",
+        "Technical Round 1 (DSA + Python + ML fundamentals)",
+        "Technical Round 2 (ML system design \u2014 course recommendation, AI hackathon platform)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT/DS",
+      "topics": [
+        "DSA",
+        "Python",
+        "Machine Learning",
+        "SQL",
+        "NLP",
+        "Recommendation Systems",
+        "Statistics",
+        "System Design"
+      ],
+      "notes": "Analytics Vidhya is a data science education and community platform. Strong ML and Python skills combined with data science community involvement is valued. Familiarity with their platform is a plus."
     },
     {
       "id": "baker-hughes",
@@ -3977,10 +5796,26 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding/data problems + energy/engineering MCQ, 90 min)",
+        "Technical Round 1 (DSA + Python/C++ for software roles; petroleum engineering for domain roles)",
+        "Technical Round 2 (Domain-specific \u2014 oilfield technology, industrial IoT, data analytics for energy)",
+        "Technical Round 3 (System Design \u2014 industrial IoT or subsurface data platform)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/ECE/EEE/Petroleum/Mechanical",
+      "topics": [
+        "DSA",
+        "Python",
+        "C++",
+        "Industrial IoT",
+        "Oilfield Technology",
+        "SCADA",
+        "Data Analytics",
+        "System Design",
+        "Energy Domain"
+      ],
+      "notes": "Baker Hughes is an energy technology company (oilfield services). Industrial IoT, drilling technology, and energy data analytics are core areas. For SDE roles, energy data platform design is relevant."
     },
     {
       "id": "bazaarvoice",
@@ -4001,10 +5836,26 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems, LC Medium, 75 min)",
+        "Technical Round 1 (DSA \u2014 arrays, trees, hashing)",
+        "Technical Round 2 (System Design \u2014 user-generated content platform, ratings and reviews)",
+        "Technical Round 3 (CS fundamentals \u2014 OOP, DBMS)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT",
+      "topics": [
+        "Arrays",
+        "Trees",
+        "Hashing",
+        "System Design",
+        "Content Platforms",
+        "UGC",
+        "OOP",
+        "DBMS",
+        "APIs"
+      ],
+      "notes": "BazaarVoice is a UGC platform for retail (product ratings, reviews). System design involves content moderation, review aggregation, and retail analytics at scale."
     },
     {
       "id": "broadridge",
@@ -4025,10 +5876,24 @@
       "domain": [
         "Finance"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + quantitative + 2 coding problems + finance MCQ, 90 min)",
+        "Technical Round 1 (DSA \u2014 arrays, sorting, hashing)",
+        "Technical Round 2 (CS fundamentals + finance systems \u2014 OOP, DBMS, trade processing)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT/ECE; finance interest",
+      "topics": [
+        "Arrays",
+        "Sorting",
+        "Hashing",
+        "OOP",
+        "DBMS",
+        "Trade Processing",
+        "Finance Systems",
+        "System Design"
+      ],
+      "notes": "Fintech providing investor communications and trading infrastructure. Know trade lifecycle (order \u2192 execution \u2192 settlement \u2192 clearing). SWIFT and FIX protocol basics are useful."
     },
     {
       "id": "charterlabs",
@@ -4049,10 +5914,24 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Technical Assessment (DSA + fintech/blockchain problem, 60 min)",
+        "Technical Round 1 (DSA + backend fundamentals)",
+        "Technical Round 2 (System Design \u2014 tokenization or digital securities platform)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT",
+      "topics": [
+        "DSA",
+        "System Design",
+        "Blockchain",
+        "Tokenization",
+        "APIs",
+        "OOP",
+        "DBMS",
+        "Digital Securities"
+      ],
+      "notes": "Fintech startup in digital securities/tokenization. Blockchain and financial instrument tokenization knowledge is relevant."
     },
     {
       "id": "kredit-bee",
@@ -4073,10 +5952,25 @@
       "domain": [
         "Finance"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (2 DSA problems, LC Medium, 60 min)",
+        "Technical Round 1 (DSA \u2014 arrays, hashing, trees)",
+        "Technical Round 2 (System Design \u2014 NBFC lending platform, credit scoring)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT",
+      "topics": [
+        "Arrays",
+        "Hashing",
+        "Trees",
+        "System Design",
+        "Fintech",
+        "Credit Scoring",
+        "APIs",
+        "OOP",
+        "DBMS"
+      ],
+      "notes": "KreditBee is a digital lending platform (NBFC). Credit scoring model integration, loan origination system design, and fintech APIs are directly relevant."
     },
     {
       "id": "pegasystems",
@@ -4097,10 +5991,27 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems, LC Medium, 90 min)",
+        "Technical Round 1 (DSA \u2014 arrays, trees, graphs, DP)",
+        "Technical Round 2 (System Design \u2014 BPM/CRM platform design)",
+        "Technical Round 3 (CS fundamentals \u2014 OOP, DBMS, Design Patterns)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT",
+      "topics": [
+        "Arrays",
+        "Trees",
+        "Graphs",
+        "Dynamic Programming",
+        "System Design",
+        "BPM",
+        "CRM",
+        "OOP",
+        "Design Patterns",
+        "DBMS"
+      ],
+      "notes": "Pegasystems builds BPM and CRM software. Design patterns and OOP depth are heavily tested. BPM/workflow engine design and CRM platform architecture are common system design topics."
     },
     {
       "id": "ptc",
@@ -4121,10 +6032,26 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems + CAD/PLM MCQ, 90 min)",
+        "Technical Round 1 (DSA + C++/Python)",
+        "Technical Round 2 (System Design or CAD/PLM domain \u2014 product lifecycle management)",
+        "Technical Round 3 (CS fundamentals + domain round \u2014 IoT/AR for manufacturing)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/ECE/Mechanical",
+      "topics": [
+        "DSA",
+        "C++",
+        "Python",
+        "PLM",
+        "CAD",
+        "IoT",
+        "Augmented Reality",
+        "System Design",
+        "Manufacturing Technology"
+      ],
+      "notes": "PTC provides PLM, IoT, and AR software for manufacturing. ThingWorx IoT platform and Vuforia AR knowledge is a differentiator. PLM concepts (BOM, change management) are domain-relevant."
     },
     {
       "id": "tazapay",
@@ -4145,10 +6072,24 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Technical Assessment (DSA + payments problem, 60 min)",
+        "Technical Round 1 (DSA + backend fundamentals)",
+        "Technical Round 2 (System Design \u2014 cross-border payments or escrow platform)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT",
+      "topics": [
+        "DSA",
+        "System Design",
+        "Cross-Border Payments",
+        "Escrow",
+        "APIs",
+        "OOP",
+        "DBMS",
+        "Payment Protocols"
+      ],
+      "notes": "Tazapay is a cross-border payments startup. Escrow payment flows, FX conversion, and international payment settlement knowledge is directly relevant."
     },
     {
       "id": "tredence-analytics",
@@ -4170,10 +6111,26 @@
         "AI/ML",
         "Data"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + ML/data + 1-2 coding problems, 90 min)",
+        "Technical Round 1 (DSA + Python + SQL + ML fundamentals)",
+        "Technical Round 2 (Case Study \u2014 retail or FMCG analytics problem)",
+        "Technical Round 3 (ML system design \u2014 recommendation or demand forecasting)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT/DS/Mathematics",
+      "topics": [
+        "DSA",
+        "Python",
+        "SQL",
+        "Machine Learning",
+        "Data Analytics",
+        "Retail Analytics",
+        "Recommendation Systems",
+        "Demand Forecasting",
+        "Statistics"
+      ],
+      "notes": "Tredence is a data science and AI consulting firm specializing in retail/CPG analytics. Strong Python, SQL, and retail domain knowledge is essential. Case studies involve real-world analytics problems."
     },
     {
       "id": "uipath",
@@ -4194,10 +6151,25 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (2 DSA problems, LC Medium, 75 min)",
+        "Technical Round 1 (DSA \u2014 arrays, trees, DP)",
+        "Technical Round 2 (System Design \u2014 RPA workflow engine or automation platform)",
+        "Technical Round 3 (CS fundamentals \u2014 OOP, Design Patterns)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT",
+      "topics": [
+        "Arrays",
+        "Trees",
+        "Dynamic Programming",
+        "System Design",
+        "OOP",
+        "Design Patterns",
+        "Automation",
+        "Process Mining"
+      ],
+      "notes": "RPA and automation platform. UiPath product knowledge is a plus. System design often involves workflow orchestration, process recording, and enterprise automation pipelines. Design patterns are heavily tested."
     },
     {
       "id": "zoomcar",
@@ -4218,10 +6190,24 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (2 DSA problems, LC Medium, 60 min)",
+        "Technical Round 1 (DSA \u2014 graphs, BFS/DFS, priority queues)",
+        "Technical Round 2 (System Design \u2014 car sharing and fleet management platform)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT",
+      "topics": [
+        "Graphs",
+        "BFS/DFS",
+        "Priority Queues",
+        "System Design",
+        "Fleet Management",
+        "Geospatial Algorithms",
+        "OOP",
+        "APIs"
+      ],
+      "notes": "Zoomcar is a self-drive car rental platform. Fleet management, vehicle tracking, and availability/booking system design are signature topics. Geohashing and real-time availability is relevant."
     },
     {
       "id": "apple",
@@ -4242,14 +6228,27 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [
-        "DSA",
-        "Systems Programming",
-        "Swift/C++"
+      "rounds": [
+        "Online Assessment (2-3 DSA problems, LC Medium-Hard, 90 min)",
+        "Technical Phone Screen (1 DSA problem + discussion of past projects)",
+        "Virtual/Onsite Rounds (4-5 rounds): DSA, System Design, CS fundamentals, Hardware/Platform-specific, Behavioral",
+        "Bar Raiser Round (cross-functional culture and values assessment)"
       ],
-      "notes": "Internship only. Very selective."
+      "eligibility": "8.0+ CGPA, CSE/ECE; highly competitive \u2014 top performers only",
+      "topics": [
+        "Arrays",
+        "Trees",
+        "Graphs",
+        "Dynamic Programming",
+        "System Design",
+        "OS",
+        "Networking",
+        "OOP",
+        "Swift/Objective-C (for iOS roles)",
+        "C++ (for hardware/embedded roles)",
+        "Distributed Systems"
+      ],
+      "notes": "Apple has one of the most rigorous interview processes. Role-specific depth varies greatly: iOS roles need Swift/Objective-C, hardware needs C++/embedded knowledge, ML needs Python/Core ML. Bar raiser round is Apple-specific and evaluates culture and ambiguity tolerance."
     },
     {
       "id": "hsbc",
@@ -4270,10 +6269,24 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + quantitative + 2 coding problems, 90 min)",
+        "Technical Round 1 (DSA \u2014 arrays, hashing, graphs)",
+        "Technical Round 2 (CS fundamentals + banking systems \u2014 Networking, DBMS, payment protocols)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE",
+      "topics": [
+        "Arrays",
+        "Hashing",
+        "Graphs",
+        "Networking",
+        "DBMS",
+        "Banking Systems",
+        "Payment Protocols",
+        "OOP"
+      ],
+      "notes": "HSBC Technology India focuses on banking technology. Networking and security knowledge is relevant given their global infrastructure. Know SWIFT messaging and international payment systems."
     },
     {
       "id": "goldman-sachs-internship",
@@ -4294,10 +6307,23 @@
       "domain": [
         "Finance"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + quantitative + 2 coding problems, 90 min)",
+        "Technical Round 1 (DSA \u2014 arrays, DP, sorting)",
+        "Technical Round 2 (CS fundamentals + finance basics \u2014 OOP, DBMS, market concepts)",
+        "HR Round"
+      ],
+      "eligibility": "8.0+ CGPA, CSE/IT/ECE; pre-final year",
+      "topics": [
+        "Arrays",
+        "Dynamic Programming",
+        "Sorting",
+        "OOP",
+        "DBMS",
+        "Finance Basics",
+        "Quantitative Reasoning"
+      ],
+      "notes": "Internship process is slightly less intensive than FTE but still has a strong quantitative component. High conversion rate from intern to FTE. Finance interest is assessed."
     },
     {
       "id": "fractal-analytics",
@@ -4319,10 +6345,25 @@
         "AI/ML",
         "Data"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + quantitative + 1-2 data/coding problems, 90 min)",
+        "Technical Round 1 (DSA + Python + statistics \u2014 arrays, probability, distributions)",
+        "Technical Round 2 (ML/AI \u2014 algorithms, model selection, A/B testing)",
+        "Technical Round 3 (Case study \u2014 business analytics problem)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/DS/Mathematics",
+      "topics": [
+        "DSA",
+        "Python",
+        "Statistics",
+        "Machine Learning",
+        "A/B Testing",
+        "Business Analytics",
+        "SQL",
+        "Probability"
+      ],
+      "notes": "Fractal Analytics focuses on AI for decision science. Strong statistics and analytics orientation. Business case study round is unique \u2014 combine data analysis with business insight."
     },
     {
       "id": "oracle-2",
@@ -4343,10 +6384,26 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems, LC Medium, 90 min)",
+        "Technical Round 1 (DSA \u2014 trees, graphs, hashing, DP)",
+        "Technical Round 2 (DBMS + System Design \u2014 Oracle DB internals, query optimization, indexing)",
+        "Technical Round 3 (CS fundamentals \u2014 OS, Networking, OOP)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE",
+      "topics": [
+        "Trees",
+        "Graphs",
+        "Hashing",
+        "Dynamic Programming",
+        "DBMS",
+        "SQL",
+        "System Design",
+        "OS",
+        "OOP"
+      ],
+      "notes": "Oracle India hires for database engineering and cloud infrastructure. Deep DBMS knowledge (indexing, transactions, ACID, query planning) is a strong differentiator. Know Oracle Cloud (OCI) vs AWS/Azure basics."
     },
     {
       "id": "tresvista",
@@ -4367,10 +6424,24 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + quantitative finance + Excel/Python problem, 90 min)",
+        "Technical Interview 1 (Financial modeling \u2014 DCF, LBO, M&A concepts; Python or Excel)",
+        "Case Study (financial analysis or valuation case)",
+        "HR Round (interest in private equity/investment banking research)"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/Finance/Economics; finance interest essential",
+      "topics": [
+        "Financial Modeling",
+        "DCF Valuation",
+        "LBO Analysis",
+        "M&A",
+        "Python",
+        "Excel",
+        "Quantitative Finance",
+        "Equity Research"
+      ],
+      "notes": "TresVista provides financial analytics and research services to PE/VC firms. Financial modeling (DCF, LBO) is directly tested. Python for financial analysis is important. This is a finance + tech role, not pure SDE."
     },
     {
       "id": "value-creed",
@@ -4391,10 +6462,25 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems + finance/commodities MCQ, 90 min)",
+        "Technical Round 1 (DSA + OOP + Python/Java)",
+        "Technical Round 2 (System Design \u2014 commodity trading platform, ETRM systems)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT/ECE",
+      "topics": [
+        "DSA",
+        "OOP",
+        "Python",
+        "Java",
+        "System Design",
+        "Commodity Trading",
+        "ETRM",
+        "Energy Markets",
+        "APIs"
+      ],
+      "notes": "ValueCreed specializes in Energy and Commodity Trading Risk Management (ETRM) software. Commodity markets (oil, gas, power, agriculture) and ETRM platform knowledge is highly relevant."
     },
     {
       "id": "bank-of-america",
@@ -4415,10 +6501,24 @@
       "domain": [
         "Finance"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + quantitative + 2 coding problems + finance MCQ, 90 min)",
+        "Technical Round 1 (DSA \u2014 arrays, strings, sorting, basic DP)",
+        "Technical Round 2 (CS fundamentals + banking \u2014 OOP, DBMS, payment systems)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT/ECE; finance interest",
+      "topics": [
+        "Arrays",
+        "Strings",
+        "Sorting",
+        "OOP",
+        "DBMS",
+        "Payment Systems",
+        "Banking Systems",
+        "Finance Basics"
+      ],
+      "notes": "Large-scale campus recruiter from VIT. Finance aptitude in OA is significant. Know core banking systems, UPI, SWIFT, and RTGS. Technical bar is moderate but finance knowledge differentiates."
     },
     {
       "id": "goldman-sachs",
@@ -4442,20 +6542,25 @@
         "SDE"
       ],
       "rounds": [
-        "HackerRank Online Assessment (aptitude + coding + finance)",
-        "HireVue Video Interview",
-        "Superday (multiple rounds: technical + behavioural + case)",
-        "Partner / MD Round"
+        "Online Assessment (aptitude + quantitative + 2 coding problems, LC Medium, 90 min)",
+        "Technical Round 1 (DSA \u2014 arrays, trees, DP, graphs)",
+        "Technical Round 2 (LLD \u2014 design a trading or financial system component)",
+        "Technical Round 3 (System Design + CS fundamentals)",
+        "HR Round"
       ],
-      "eligibility": "8.0+ CGPA",
+      "eligibility": "8.0+ CGPA, CSE/IT/ECE; top 10% of class",
       "topics": [
-        "Quant/Math",
-        "Probability",
-        "DSA",
+        "Arrays",
+        "Trees",
+        "Dynamic Programming",
+        "Graphs",
+        "LLD",
+        "System Design",
         "Finance Basics",
-        "Behavioural"
+        "OOP",
+        "DBMS"
       ],
-      "notes": "CTC appears low but prestige + bonuses are significant. Quant-heavy process."
+      "notes": "Despite the salary band, Goldman Sachs has a very rigorous interview. Multiple technical rounds with LLD + system design. Finance concepts (derivatives, risk, trading) are tested. Quantitative aptitude in OA is non-trivial."
     },
     {
       "id": "honeywell",
@@ -4476,10 +6581,24 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems + technical MCQ, 90 min)",
+        "Technical Round 1 (DSA + C++ for embedded/industrial roles)",
+        "Technical Round 2 (Embedded Systems or System Design \u2014 industrial automation)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/ECE/EEE",
+      "topics": [
+        "DSA",
+        "C++",
+        "Embedded Systems",
+        "OOP",
+        "Industrial Automation",
+        "IoT",
+        "SCADA Basics",
+        "OS"
+      ],
+      "notes": "Honeywell Technology Solutions (Bangalore) builds industrial automation software. Embedded C/C++ and industrial IoT knowledge is valued. SCADA and building automation system concepts are a plus."
     },
     {
       "id": "tcs-prime",
@@ -4500,10 +6619,21 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "TCS NQT \u2014 National Qualifier Test (aptitude + advanced coding, 2 LC Medium problems)",
+        "Technical Interview (DSA \u2014 arrays, strings, OOP, DBMS)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT/ECE; higher NQT score band required for Prime",
+      "topics": [
+        "Arrays",
+        "Strings",
+        "OOP",
+        "DBMS",
+        "Aptitude",
+        "Basic Algorithms"
+      ],
+      "notes": "TCS Prime is TCS's elite stream for top NQT scorers. Better projects and slightly higher CTC than regular TCS. Clearing the NQT with a high band is the key filter."
     },
     {
       "id": "sap-labs",
@@ -4524,10 +6654,26 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems, LC Medium, 90 min)",
+        "Technical Round 1 (DSA \u2014 arrays, trees, dynamic programming)",
+        "Technical Round 2 (LLD + OOP \u2014 design an enterprise service or module)",
+        "Technical Round 3 (DBMS + System Design + CS fundamentals)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/ECE",
+      "topics": [
+        "Arrays",
+        "Trees",
+        "Dynamic Programming",
+        "LLD",
+        "OOP",
+        "DBMS",
+        "System Design",
+        "Java",
+        "ERP Concepts"
+      ],
+      "notes": "SAP Labs India FTE (non-PPO). Java is the primary language. Enterprise software design, ABAP basics, and understanding of ERP modules (finance, HR, supply chain) gives an edge."
     },
     {
       "id": "ey-india",
@@ -4548,10 +6694,22 @@
       "domain": [
         "Consulting"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + verbal + 1-2 basic coding problems, 75 min)",
+        "Group Discussion (current tech topic)",
+        "Technical Interview (OOP, DBMS, project discussion)",
+        "HR Round"
+      ],
+      "eligibility": "6.5+ CGPA, CSE/IT/ECE and other branches",
+      "topics": [
+        "Aptitude",
+        "OOP",
+        "DBMS",
+        "Basic DSA",
+        "Cloud Basics",
+        "Project Discussion"
+      ],
+      "notes": "EY India tech consulting \u2014 moderate bar. Communication and GD performance matter. Cloud knowledge (AWS/Azure basics) is increasingly valued. Be ready to discuss projects clearly."
     },
     {
       "id": "quantiphi",
@@ -4573,10 +6731,25 @@
         "AI/ML",
         "Data"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + ML/data + 1-2 coding problems, 90 min)",
+        "Technical Round 1 (DSA + Python \u2014 arrays, DP, data structures)",
+        "Technical Round 2 (ML/AI \u2014 ML algorithms, model evaluation, feature engineering)",
+        "Technical Round 3 (Case study \u2014 applied AI/data science problem)",
+        "HR Round"
+      ],
+      "eligibility": "7.5+ CGPA, CSE/IT/DS; strong ML background",
+      "topics": [
+        "DSA",
+        "Python",
+        "Machine Learning",
+        "Deep Learning",
+        "Statistics",
+        "Feature Engineering",
+        "Model Evaluation",
+        "SQL"
+      ],
+      "notes": "Applied AI company. Strong ML fundamentals are essential \u2014 know regression, classification, neural networks, and ML system design. Python and SQL proficiency are mandatory."
     },
     {
       "id": "pwc",
@@ -4630,10 +6803,24 @@
       "domain": [
         "Consulting"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + 2 coding problems, LC Easy-Medium, 90 min)",
+        "Technical Round 1 (DSA + OOP + DBMS)",
+        "Technical Round 2 (System Design + Cloud \u2014 AWS/Azure basics, microservices)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT/ECE",
+      "topics": [
+        "DSA",
+        "OOP",
+        "DBMS",
+        "System Design",
+        "Cloud Computing",
+        "Microservices",
+        "Java",
+        "Python"
+      ],
+      "notes": "Hashedin (Deloitte's product engineering firm) focuses on cloud-native product development. Cloud awareness (AWS/Azure) and microservices architecture is more important than competitive DSA."
     },
     {
       "id": "deloitte-usi",
@@ -4654,10 +6841,21 @@
       "domain": [
         "Consulting"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + verbal + coding, LC Easy-Medium, 90 min)",
+        "Technical Interview (DSA basics, OOP, DBMS, cloud concepts)",
+        "HR Round"
+      ],
+      "eligibility": "7.0+ CGPA, CSE/IT/ECE",
+      "topics": [
+        "Basic DSA",
+        "OOP",
+        "DBMS",
+        "Cloud Computing Basics",
+        "Aptitude",
+        "Projects"
+      ],
+      "notes": "Deloitte USI (US India) is a tech delivery center. Slightly higher technical bar than Deloitte India. Cloud awareness (AWS/Azure basics) is a differentiator. Project discussion is important."
     },
     {
       "id": "deloitte",
@@ -4681,18 +6879,22 @@
         "Consulting"
       ],
       "rounds": [
-        "Aptitude + Verbal Test",
+        "Online Assessment (aptitude + verbal + coding, LC Easy, 90 min)",
         "Group Discussion",
-        "Technical Interview",
-        "HR Interview"
+        "Technical Interview (basic DSA, OOP, DBMS, projects discussion)",
+        "HR Round"
       ],
-      "eligibility": "6.0+ CGPA",
+      "eligibility": "6.5+ CGPA, CSE/IT/ECE and other branches",
       "topics": [
+        "Basic DSA",
+        "OOP",
+        "DBMS",
         "Aptitude",
-        "Reasoning",
-        "Basic Tech (OOPS, DBMS)"
+        "Verbal Reasoning",
+        "Projects",
+        "Consulting Concepts"
       ],
-      "notes": "Largest recruiter. Mass hiring. Good for getting first offer while targeting higher."
+      "notes": "Deloitte India (tech consulting) has a moderate technical bar. Group discussion performance matters. Focus on your projects and clear communication. DBMS and OOP fundamentals are sufficient."
     },
     {
       "id": "ey-global",
@@ -4713,10 +6915,20 @@
       "domain": [
         "Consulting"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + verbal + basic coding, 75 min)",
+        "Technical Interview (OOP, DBMS, basic DS, projects)",
+        "HR Round"
+      ],
+      "eligibility": "6.5+ CGPA, CSE/IT/ECE",
+      "topics": [
+        "Aptitude",
+        "OOP",
+        "DBMS",
+        "Basic Algorithms",
+        "Project Discussion"
+      ],
+      "notes": "EY Global Delivery Services \u2014 tech delivery arm. Similar to EY India in process. Focuses on implementation skills. Project discussion and OOP are key evaluation criteria."
     },
     {
       "id": "tcs-digital",
@@ -4737,10 +6949,20 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "TCS NQT \u2014 National Qualifier Test (aptitude + coding, 1 LC Medium problem)",
+        "Technical Interview (basic DSA, OOP, DBMS)",
+        "HR Round"
+      ],
+      "eligibility": "6.0+ CGPA, CSE/IT/ECE and other branches; Digital band NQT",
+      "topics": [
+        "Basic DSA",
+        "OOP",
+        "DBMS",
+        "Aptitude",
+        "Verbal Reasoning"
+      ],
+      "notes": "TCS Digital requires the Digital qualifier band in NQT. Moderate technical bar. Focuses on foundational CS knowledge. High volume recruiter \u2014 NQT performance is the primary filter."
     },
     {
       "id": "capgemini",
@@ -4761,10 +6983,21 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + verbal + 2 easy coding problems, 90 min \u2014 COCUBES/Capgemini platform)",
+        "Technical Interview (basic DSA, OOP, DBMS, project discussion)",
+        "HR Interview (communication, relocation, career goals)"
+      ],
+      "eligibility": "6.0+ CGPA, CSE/IT/ECE and other branches",
+      "topics": [
+        "Basic DSA",
+        "OOP",
+        "DBMS",
+        "Aptitude",
+        "Verbal Reasoning",
+        "Project Discussion"
+      ],
+      "notes": "Capgemini is a large IT services company. Low technical bar \u2014 aptitude and communication performance dominates. DBMS and OOP fundamentals are sufficient. Profile-based shortlisting is common."
     },
     {
       "id": "ibm",
@@ -4797,7 +7030,7 @@
         "Technical Fundamentals",
         "OOP"
       ],
-      "notes": ""
+      "notes": "IBM hires across multiple tracks \u2014 consulting, cloud (Red Hat), AI (Watson), and infra. The technical bar varies by role. Java is the primary enterprise language. IBM Cloud, OpenShift, and AI/ML service design are common for cloud-AI roles. IBM values collaborative culture."
     },
     {
       "id": "prodapt",
@@ -4818,10 +7051,22 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "6.0+ CGPA",
-      "topics": [],
-      "notes": "Based in Chennai. Good entry-level option."
+      "rounds": [
+        "Online Assessment (aptitude + 1-2 easy coding problems + telecom MCQ, 75 min)",
+        "Technical Interview (DSA basics, OOP, DBMS, project discussion, networking basics)",
+        "HR Interview (interest in telecom domain, relocation)"
+      ],
+      "eligibility": "6.5+ CGPA, CSE/IT/ECE",
+      "topics": [
+        "Basic DSA",
+        "OOP",
+        "DBMS",
+        "Networking",
+        "Telecom Basics",
+        "Java",
+        "Python"
+      ],
+      "notes": "Prodapt is a telecom-focused IT services company. Networking and telecom domain knowledge is a differentiator. Technical bar is moderate \u2014 good fundamentals and project discussion are key."
     },
     {
       "id": "wipro-turbo",
@@ -4842,10 +7087,22 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Wipro NLTH (National Level Test for Hiring): Aptitude + verbal + coding (2 easy-medium problems, 90 min)",
+        "Technical Interview (basic DSA, OOP, DBMS, project discussion)",
+        "HR Interview"
+      ],
+      "eligibility": "6.0+ CGPA, CSE/IT/ECE and other branches",
+      "topics": [
+        "Basic DSA",
+        "OOP",
+        "DBMS",
+        "Aptitude",
+        "Verbal Reasoning",
+        "Java",
+        "Python"
+      ],
+      "notes": "Wipro Turbo is the higher-band stream of Wipro campus hiring. Clearing NLTH with a higher band score is the primary filter. Technical interview is moderate \u2014 CS fundamentals and project discussion are key."
     },
     {
       "id": "kpmg",
@@ -4930,10 +7187,21 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (GenC/OTDS platform): Aptitude + verbal reasoning + coding (1-2 easy problems, 90 min)",
+        "Technical Interview (basic DSA, OOP, DBMS, SQL, project discussion)",
+        "HR Interview"
+      ],
+      "eligibility": "6.0+ CGPA, CSE/IT/ECE and most branches",
+      "topics": [
+        "Basic DSA",
+        "OOP",
+        "DBMS",
+        "SQL",
+        "Aptitude",
+        "Verbal Reasoning"
+      ],
+      "notes": "Cognizant is a high-volume IT services recruiter. Low bar \u2014 aptitude performance in GenC platform dominates. Focus on DBMS, OOP basics, and clear project communication. GenC Pro and GenC Elevate are higher bands."
     },
     {
       "id": "ltimindtree",
@@ -4954,10 +7222,21 @@
       "domain": [
         "SDE"
       ],
-      "rounds": [],
-      "eligibility": "Open",
-      "topics": [],
-      "notes": ""
+      "rounds": [
+        "Online Assessment (aptitude + verbal + 2 easy coding problems, 90 min \u2014 LTIMindtree platform)",
+        "Technical Interview (basic DSA, OOP, DBMS, project discussion, SQL queries)",
+        "HR Interview"
+      ],
+      "eligibility": "6.0+ CGPA, CSE/IT/ECE and other branches",
+      "topics": [
+        "Basic DSA",
+        "OOP",
+        "DBMS",
+        "SQL",
+        "Aptitude",
+        "Verbal Reasoning"
+      ],
+      "notes": "LTIMindtree (merger of LTI and Mindtree) is a large IT services company. Moderate technical bar \u2014 solid OOP, DBMS, and project discussion skills are sufficient. SQL queries are commonly tested."
     },
     {
       "id": "tcs",

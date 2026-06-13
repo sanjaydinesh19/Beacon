@@ -12,7 +12,7 @@
 		month: string;
 		year: number;
 		studentsPlaced: number | null;
-		tier: 'super-dream' | 'dream' | 'normal';
+		tier: 'marquee' | 'super-dream' | 'dream';
 		domain: string[];
 		rounds: string[];
 		eligibility: string;
@@ -42,18 +42,18 @@
 		rejected: 'Rejected',
 	};
 
-	const TIER_ORDER: Record<string, number> = { 'super-dream': 0, dream: 1, normal: 2 };
+	const TIER_ORDER: Record<string, number> = { marquee: 0, 'super-dream': 1, dream: 2 };
 
 	let companies: Company[] = [];
 	let tracker: Record<string, TrackerEntry> = {};
 	let lastBackup: string | null = null;
 	let loading = true;
-	let backingUp = false;
-	let backupMsg = '';
 
-	// Filters
+	// Tier multi-select — default: show Marquee + Super Dream
+	let tierFilters: Set<string> = new Set(['marquee', 'super-dream']);
+
+	// Other filters
 	let search = '';
-	let filterTier = '';
 	let filterDomain = '';
 	let filterType = '';
 
@@ -105,30 +105,25 @@
 		tracker = rest;
 	}
 
-	async function backup() {
-		backingUp = true;
-		backupMsg = '';
-		const res = await fetch('/api/placement/backup', { method: 'POST' });
-		const data = await res.json();
-		if (res.ok) {
-			lastBackup = new Date().toISOString();
-			backupMsg = `Backed up to ${data.repo}`;
-		} else {
-			backupMsg = data.detail ?? 'Backup failed';
-		}
-		backingUp = false;
-	}
-
 	function openEdit(id: string) {
 		editId = id;
 		editStatus = (tracker[id]?.status as Status) ?? 'watchlist';
 		editNotes = tracker[id]?.notes ?? '';
 	}
 
+	function toggleTier(t: string) {
+		if (tierFilters.has(t)) {
+			tierFilters.delete(t);
+		} else {
+			tierFilters.add(t);
+		}
+		tierFilters = new Set(tierFilters);
+	}
+
 	onMount(loadAll);
 
 	$: filtered = companies.filter(c => {
-		if (filterTier && c.tier !== filterTier) return false;
+		if (tierFilters.size > 0 && !tierFilters.has(c.tier)) return false;
 		if (filterDomain && !c.domain.some(d => d.toLowerCase() === filterDomain.toLowerCase())) return false;
 		if (filterType && c.type !== filterType) return false;
 		if (search) {
@@ -151,15 +146,15 @@
 	$: kanbanCount = Object.keys(tracker).length;
 
 	function tierColor(tier: string) {
-		if (tier === 'super-dream') return 'var(--accent)';
-		if (tier === 'dream') return '#8b7cf8';
-		return 'var(--text-muted)';
+		if (tier === 'marquee') return '#f5c842';
+		if (tier === 'super-dream') return '#8b7cf8';
+		return '#6b7280';
 	}
 
 	function tierLabel(tier: string) {
+		if (tier === 'marquee') return 'Marquee';
 		if (tier === 'super-dream') return 'Super Dream';
-		if (tier === 'dream') return 'Dream';
-		return 'Normal';
+		return 'Dream';
 	}
 
 	function statusColor(s: string) {
@@ -206,7 +201,7 @@
 					{/each}
 				</div>
 				<label class="field-label">Notes</label>
-				<textarea class="notes-input" bind:value={editNotes} placeholder="Your prep notes, round feedback, reminders..." rows={4}></textarea>
+				<textarea class="notes-input" bind:value={editNotes} placeholder="Prep notes, round feedback, reminders..." rows={4}></textarea>
 			</div>
 			<div class="modal-footer">
 				{#if trackedIds.has(editId)}
@@ -223,27 +218,38 @@
 	<header>
 		<div class="header-left">
 			<h1>Placements</h1>
-			<span class="sub">VIT Chennai · 2022–2025 data</span>
+			<span class="sub">VIT Chennai · 2022–2025 · auto-backup every 6h</span>
 		</div>
-		<div class="header-right">
-			<span class="backup-time">Backup: {relativeTime(lastBackup)}</span>
-			<button class="btn-ghost" on:click={backup} disabled={backingUp}>
-				{backingUp ? 'Backing up...' : '↑ Backup'}
-			</button>
-		</div>
+		<span class="backup-time" title="Last synced to GitHub">⟳ {relativeTime(lastBackup)}</span>
 	</header>
-
-	{#if backupMsg}
-		<div class="backup-banner">{backupMsg}</div>
-	{/if}
 
 	<!-- Stats -->
 	<div class="stats-row">
-		<div class="stat"><span class="stat-val">{companies.length}</span><span class="stat-key">Companies</span></div>
-		<div class="stat"><span class="stat-val">{companies.filter(c => c.tier === 'super-dream').length}</span><span class="stat-key">Super Dream</span></div>
-		<div class="stat"><span class="stat-val">{companies.filter(c => c.tier === 'dream').length}</span><span class="stat-key">Dream</span></div>
-		<div class="stat"><span class="stat-val">{kanbanCount}</span><span class="stat-key">Tracking</span></div>
-		<div class="stat"><span class="stat-val">{Object.values(tracker).filter(t => t.status === 'offered').length}</span><span class="stat-key">Offers</span></div>
+		<div class="stat marquee-stat">
+			<span class="stat-val">{companies.filter(c => c.tier === 'marquee').length}</span>
+			<span class="stat-key">Marquee</span>
+			<span class="stat-sub">20+ LPA</span>
+		</div>
+		<div class="stat sd-stat">
+			<span class="stat-val">{companies.filter(c => c.tier === 'super-dream').length}</span>
+			<span class="stat-key">Super Dream</span>
+			<span class="stat-sub">10–20 LPA</span>
+		</div>
+		<div class="stat">
+			<span class="stat-val">{companies.filter(c => c.tier === 'dream').length}</span>
+			<span class="stat-key">Dream</span>
+			<span class="stat-sub">&lt;10 LPA</span>
+		</div>
+		<div class="stat">
+			<span class="stat-val">{kanbanCount}</span>
+			<span class="stat-key">Tracking</span>
+			<span class="stat-sub">active</span>
+		</div>
+		<div class="stat">
+			<span class="stat-val">{Object.values(tracker).filter(t => t.status === 'offered').length}</span>
+			<span class="stat-key">Offers</span>
+			<span class="stat-sub">received</span>
+		</div>
 	</div>
 
 	<!-- View Toggle + Filters -->
@@ -256,12 +262,28 @@
 		{#if view === 'browse'}
 			<div class="filters">
 				<input class="search-input" bind:value={search} placeholder="Search company or role..." />
-				<select class="filter-select" bind:value={filterTier}>
-					<option value="">All Tiers</option>
-					<option value="super-dream">Super Dream (30+ LPA)</option>
-					<option value="dream">Dream (15–30 LPA)</option>
-					<option value="normal">Normal (&lt;15 LPA)</option>
-				</select>
+
+				<div class="tier-pills">
+					<button
+						class="tier-pill"
+						class:active={tierFilters.has('marquee')}
+						style="--tc: #f5c842"
+						on:click={() => toggleTier('marquee')}
+					>Marquee</button>
+					<button
+						class="tier-pill"
+						class:active={tierFilters.has('super-dream')}
+						style="--tc: #8b7cf8"
+						on:click={() => toggleTier('super-dream')}
+					>Super Dream</button>
+					<button
+						class="tier-pill"
+						class:active={tierFilters.has('dream')}
+						style="--tc: #6b7280"
+						on:click={() => toggleTier('dream')}
+					>Dream</button>
+				</div>
+
 				<select class="filter-select" bind:value={filterDomain}>
 					<option value="">All Domains</option>
 					<option value="SDE">SDE</option>
@@ -269,8 +291,8 @@
 					<option value="AI/ML">AI / ML</option>
 					<option value="Finance">Finance / Quant</option>
 					<option value="Hardware">Hardware / VLSI</option>
+					<option value="Robotics">Robotics</option>
 					<option value="Consulting">Consulting</option>
-					<option value="Non-Tech">Non-Tech</option>
 				</select>
 				<select class="filter-select" bind:value={filterType}>
 					<option value="">All Types</option>
@@ -294,6 +316,7 @@
 		{:else if filtered.length === 0}
 			<div class="empty-state"><span>◎</span><p>No companies match your filters.</p></div>
 		{:else}
+			<p class="result-count">{filtered.length} companies</p>
 			<div class="card-grid">
 				{#each filtered as c}
 					<div class="company-card" class:tracked={trackedIds.has(c.id)}>
@@ -312,16 +335,17 @@
 							<span class="card-type">{c.type}</span>
 						</div>
 
-						<div class="card-roles">
-							{#each c.roles.slice(0, 2) as r}
-								<span class="role-chip">{r}</span>
-							{/each}
-						</div>
+						{#if c.roles.length}
+							<div class="card-roles">
+								{#each c.roles.slice(0, 2) as r}
+									<span class="role-chip">{r}</span>
+								{/each}
+							</div>
+						{/if}
 
-						<div class="card-meta">
-							<span>📍 {c.location.slice(0, 2).join(', ')}{c.location.length > 2 ? ' +more' : ''}</span>
-							<span>{c.month} {c.year}</span>
-						</div>
+						{#if c.studentsPlaced}
+							<div class="card-placed">{c.studentsPlaced} placed · {c.year}</div>
+						{/if}
 
 						{#if expanded === c.id}
 							<div class="card-expanded">
@@ -435,18 +459,10 @@
 
 	.sub { font-size: 13px; color: var(--text-muted); }
 
-	.header-right { display: flex; align-items: center; gap: 10px; }
-
-	.backup-time { font-size: 12px; color: var(--text-muted); }
-
-	.backup-banner {
-		background: var(--surface);
-		border: 1px solid var(--border);
-		border-radius: var(--radius);
-		padding: 10px 16px;
-		font-size: 13px;
-		color: var(--green);
-		animation: fadeUp 0.3s both;
+	.backup-time {
+		font-size: 12px;
+		color: var(--text-muted);
+		opacity: 0.7;
 	}
 
 	/* Stats */
@@ -460,16 +476,23 @@
 		background: var(--surface);
 		border: 1px solid var(--border);
 		border-radius: var(--radius);
-		padding: 12px 20px;
+		padding: 12px 18px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 2px;
+		gap: 1px;
 		flex: 1;
 	}
 
+	.marquee-stat { border-color: #f5c84230; }
+	.sd-stat { border-color: #8b7cf830; }
+
 	.stat-val { font-size: 22px; font-weight: 700; color: var(--text); }
 	.stat-key { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+	.stat-sub { font-size: 10px; color: var(--text-muted); opacity: 0.6; }
+
+	.marquee-stat .stat-val { color: #f5c842; }
+	.sd-stat .stat-val { color: #8b7cf8; }
 
 	/* Controls */
 	.controls {
@@ -482,7 +505,7 @@
 
 	.view-toggle { display: flex; gap: 4px; }
 
-	.filters { display: flex; gap: 8px; flex-wrap: wrap; flex: 1; }
+	.filters { display: flex; gap: 8px; flex-wrap: wrap; flex: 1; align-items: center; }
 
 	.search-input {
 		flex: 1;
@@ -497,6 +520,26 @@
 		transition: border-color 0.15s;
 	}
 	.search-input:focus { border-color: var(--accent); }
+
+	.tier-pills { display: flex; gap: 4px; }
+
+	.tier-pill {
+		background: transparent;
+		border: 1px solid var(--border);
+		color: var(--text-muted);
+		border-radius: 100px;
+		padding: 5px 12px;
+		font-size: 12px;
+		font-weight: 500;
+		cursor: pointer;
+		transition: all 0.15s;
+	}
+	.tier-pill:hover { border-color: var(--tc); color: var(--tc); }
+	.tier-pill.active {
+		background: color-mix(in srgb, var(--tc) 12%, transparent);
+		border-color: var(--tc);
+		color: var(--tc);
+	}
 
 	.filter-select {
 		background: var(--surface);
@@ -536,7 +579,6 @@
 		transition: all 0.15s;
 	}
 	.btn-ghost:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
-	.btn-ghost:disabled { opacity: 0.5; cursor: not-allowed; }
 
 	.btn-primary {
 		background: var(--accent);
@@ -551,10 +593,17 @@
 	}
 	.btn-primary:hover { opacity: 0.85; }
 
+	/* Result count */
+	.result-count {
+		font-size: 12px;
+		color: var(--text-muted);
+		margin: 0;
+	}
+
 	/* Card Grid */
 	.card-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
 		gap: 12px;
 		animation: fadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
 	}
@@ -569,7 +618,6 @@
 		gap: 10px;
 		transition: border-color 0.15s;
 	}
-	.company-card:hover { border-color: var(--border); }
 	.company-card.tracked { border-color: var(--accent)30; }
 
 	.card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
@@ -578,9 +626,7 @@
 
 	.card-name { font-size: 15px; font-weight: 600; color: var(--text); }
 
-	.tracked-dot {
-		width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
-	}
+	.tracked-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
 
 	.tier-badge {
 		font-size: 10px;
@@ -608,7 +654,7 @@
 		color: var(--text-muted);
 	}
 
-	.card-meta { display: flex; justify-content: space-between; font-size: 12px; color: var(--text-muted); }
+	.card-placed { font-size: 12px; color: var(--text-muted); }
 
 	/* Expanded */
 	.card-expanded {

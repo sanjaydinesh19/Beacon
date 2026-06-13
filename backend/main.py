@@ -1,9 +1,24 @@
+import logging
+from contextlib import asynccontextmanager
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from routes import journal, github, placement
 
-app = FastAPI(title="Beacon")
+logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s %(levelname)s %(message)s")
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    from scheduler import ensure_backup_repo, init_scheduler, shutdown_scheduler
+    ensure_backup_repo()
+    init_scheduler()
+    yield
+    shutdown_scheduler()
+
+
+app = FastAPI(title="Beacon", lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,

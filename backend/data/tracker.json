@@ -1,4 +1,12 @@
 {
-  "companies": {},
+  "companies": {
+    "google": {
+      "addedAt": "2026-06-13",
+      "status": "researching",
+      "notes": "Main focus currently doing research on interview process",
+      "links": [],
+      "updatedAt": "2026-06-13T11:07:49.568359+00:00"
+    }
+  },
   "lastBackup": null
 }

@@ -6,6 +6,7 @@
 		{ href: '/', label: 'Dashboard', icon: '⬡' },
 		{ href: '/journal', label: 'Journal', icon: '◎' },
 		{ href: '/github', label: 'Activity', icon: '⊙' },
+		{ href: '/placement', label: 'Placements', icon: '◇' },
 	];
 </script>
 

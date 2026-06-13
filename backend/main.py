@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from routes import journal, github
+from routes import journal, github, placement
 
 app = FastAPI(title="Beacon")
 
@@ -15,6 +15,7 @@ app.add_middleware(
 
 app.include_router(journal.router, prefix="/api/journal")
 app.include_router(github.router, prefix="/api/github")
+app.include_router(placement.router, prefix="/api/placement")
 
 
 @app.get("/api/health")

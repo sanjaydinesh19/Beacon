@@ -35,6 +35,13 @@
 					<div class="qc-desc">Latest commits & PRs</div>
 				</div>
 			</a>
+			<a href="/placement" class="quick-card placements">
+				<span class="qc-icon">◇</span>
+				<div>
+					<div class="qc-name">Placements</div>
+					<div class="qc-desc">Company tracker</div>
+				</div>
+			</a>
 		</div>
 	</section>
 
@@ -117,7 +124,8 @@
 	}
 
 	.quick-card.journal .qc-icon,
-	.quick-card.activity .qc-icon {
+	.quick-card.activity .qc-icon,
+	.quick-card.placements .qc-icon {
 		font-size: 26px;
 		color: var(--accent);
 	}

@@ -33,6 +33,11 @@
 	let activityItems: ActivityItem[] = [];
 	let activityLoading = true;
 	let activityError = '';
+	let filter: 'all' | 'commit' | 'pr' = 'all';
+
+	$: filteredItems = filter === 'all'
+		? activityItems
+		: activityItems.filter(i => i.type === filter);
 
 	async function loadContributions() {
 		ghLoading = true; lcLoading = true;
@@ -105,11 +110,14 @@
 	<header>
 		<div class="header-left">
 			<h1>Activity</h1>
-			{#if ghUsername && !ghLoading}
-				<a class="handle" href="https://github.com/{ghUsername}" target="_blank" rel="noopener">
-					@{ghUsername}
+			<div class="profile-links">
+				<a class="profile-link" href="https://github.com/{ghUsername || 'sanjaydinesh19'}" target="_blank" rel="noopener">
+					GitHub ↗
 				</a>
-			{/if}
+				<a class="profile-link lc" href="https://leetcode.com/u/sanjaydinesh/" target="_blank" rel="noopener">
+					LeetCode ↗
+				</a>
+			</div>
 		</div>
 		<button
 			class="refresh-btn"
@@ -148,7 +156,14 @@
 
 	<!-- ── Activity Feed ─────────────────────────────────────────────────── -->
 	<section class="feed-section">
-		<h2 class="section-title">Recent Events</h2>
+		<div class="feed-header">
+			<h2 class="section-title">Recent Events</h2>
+			<div class="filter-pills">
+				<button class="pill" class:active={filter === 'all'} on:click={() => filter = 'all'}>All</button>
+				<button class="pill" class:active={filter === 'commit'} on:click={() => filter = 'commit'}>Commits</button>
+				<button class="pill" class:active={filter === 'pr'} on:click={() => filter = 'pr'}>PRs</button>
+			</div>
+		</div>
 
 		{#if activityLoading}
 			<div class="feed">
@@ -173,15 +188,15 @@
 				<p>{activityError}</p>
 			</div>
 
-		{:else if activityItems.length === 0}
+		{:else if filteredItems.length === 0}
 			<div class="empty-state">
 				<span class="empty-icon">◎</span>
-				<p>No recent activity found.</p>
+				<p>No {filter === 'all' ? '' : filter + ' '}activity found.</p>
 			</div>
 
 		{:else}
 			<div class="feed">
-				{#each activityItems as item, i}
+				{#each filteredItems as item, i}
 					<a
 						class="feed-item"
 						href={item.url}
@@ -242,17 +257,33 @@
 		color: var(--text);
 	}
 
-	.handle {
-		font-size: 14px;
-		color: var(--text-muted);
-		font-weight: 500;
-		text-decoration: none;
-		transition: color 0.15s;
+	.profile-links {
+		display: flex;
+		align-items: center;
+		gap: 6px;
 	}
 
-	.handle:hover {
-		color: var(--accent);
+	.profile-link {
+		font-size: 12px;
+		font-weight: 500;
+		color: var(--text-muted);
+		background: var(--surface);
+		border: 1px solid var(--border);
+		border-radius: 100px;
+		padding: 3px 10px;
 		text-decoration: none;
+		transition: all 0.15s;
+	}
+
+	.profile-link:hover {
+		color: var(--accent);
+		border-color: var(--accent);
+		text-decoration: none;
+	}
+
+	.profile-link.lc:hover {
+		color: var(--green);
+		border-color: var(--green);
 	}
 
 	.refresh-btn {
@@ -314,12 +345,47 @@
 		animation: fadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
 	}
 
+	.feed-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 12px;
+	}
+
 	.section-title {
 		font-size: 13px;
 		font-weight: 600;
 		letter-spacing: 0.08em;
 		text-transform: uppercase;
 		color: var(--text-muted);
+	}
+
+	.filter-pills {
+		display: flex;
+		gap: 4px;
+	}
+
+	.pill {
+		background: transparent;
+		border: 1px solid var(--border);
+		color: var(--text-muted);
+		border-radius: 100px;
+		padding: 3px 12px;
+		font-size: 12px;
+		font-weight: 500;
+		cursor: pointer;
+		transition: all 0.15s;
+	}
+
+	.pill:hover {
+		border-color: var(--text-muted);
+		color: var(--text);
+	}
+
+	.pill.active {
+		background: var(--accent-dim);
+		border-color: var(--accent);
+		color: var(--accent);
 	}
 
 	/* ── Feed ─────────────────────────────────────────────────────────────── */

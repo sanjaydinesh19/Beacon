@@ -109,7 +109,7 @@
 </div>
 
 {#if tip.visible}
-	<div class="tooltip" style="left: {tip.x + 12}px; top: {tip.y - 36}px">
+	<div class="tooltip" style="left: {tip.x}px; top: {tip.y - 44}px">
 		<strong>{tip.count}</strong> on {tip.date}
 	</div>
 {/if}
@@ -222,10 +222,11 @@
 		padding: 12px 0;
 	}
 
-	/* Tooltip — fixed position, outside any scroll container */
+	/* Tooltip — fixed position, centered on cursor */
 	.tooltip {
 		position: fixed;
 		pointer-events: none;
+		transform: translateX(-50%);
 		background: #1f1f2e;
 		border: 1px solid var(--border);
 		border-radius: 6px;

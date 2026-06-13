@@ -1,7 +1,10 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import ContributionChart from '$lib/ContributionChart.svelte';
 
-	type Item = {
+	type Week = { date: string; count: number; level: number }[];
+
+	type ActivityItem = {
 		type: 'commit' | 'pr';
 		repo: string;
 		repoFull: string;
@@ -12,37 +15,81 @@
 		number: number | null;
 	};
 
-	let username = '';
-	let items: Item[] = [];
-	let loading = true;
-	let error = '';
+	// GitHub contributions
+	let ghWeeks: Week[] = [];
+	let ghTotal = 0;
+	let ghUsername = '';
+	let ghLoading = true;
+	let ghError = '';
 
-	async function load() {
-		loading = true;
-		error = '';
+	// LeetCode contributions
+	let lcWeeks: Week[] = [];
+	let lcTotal = 0;
+	let lcStreak = 0;
+	let lcLoading = true;
+	let lcError = '';
+
+	// Activity feed
+	let activityItems: ActivityItem[] = [];
+	let activityLoading = true;
+	let activityError = '';
+
+	async function loadContributions() {
+		ghLoading = true; lcLoading = true;
+		ghError = ''; lcError = '';
+
+		const [ghRes, lcRes] = await Promise.allSettled([
+			fetch('/api/github/contributions'),
+			fetch('/api/github/leetcode'),
+		]);
+
+		if (ghRes.status === 'fulfilled') {
+			const d = await ghRes.value.json();
+			if (!ghRes.value.ok) ghError = d.detail ?? 'Failed';
+			else { ghWeeks = d.weeks; ghTotal = d.total; ghUsername = d.username; }
+		} else {
+			ghError = 'Network error';
+		}
+
+		if (lcRes.status === 'fulfilled') {
+			const d = await lcRes.value.json();
+			if (!lcRes.value.ok) lcError = d.detail ?? 'Failed';
+			else { lcWeeks = d.weeks; lcTotal = d.total; lcStreak = d.streak; }
+		} else {
+			lcError = 'Network error';
+		}
+
+		ghLoading = false; lcLoading = false;
+	}
+
+	async function loadActivity() {
+		activityLoading = true;
+		activityError = '';
 		try {
 			const res = await fetch('/api/github/activity');
 			const data = await res.json();
 			if (!res.ok) throw new Error(data.detail ?? 'Failed to load');
-			username = data.username;
-			items = data.items;
+			activityItems = data.items;
 		} catch (e) {
-			error = e instanceof Error ? e.message : 'Unknown error';
+			activityError = e instanceof Error ? e.message : 'Unknown error';
 		} finally {
-			loading = false;
+			activityLoading = false;
 		}
 	}
 
-	onMount(load);
+	onMount(() => {
+		loadContributions();
+		loadActivity();
+	});
 
-	function accentFor(item: Item): string {
+	function accentFor(item: ActivityItem): string {
 		if (item.type === 'commit') return 'var(--accent)';
 		if (item.meta === 'merged') return 'var(--green)';
 		if (item.meta === 'closed') return 'var(--text-muted)';
 		return '#8b7cf8';
 	}
 
-	function labelFor(item: Item): string {
+	function labelFor(item: ActivityItem): string {
 		if (item.type === 'commit') return 'pushed';
 		if (item.meta === 'merged') return 'merged pr';
 		if (item.meta === 'closed') return 'closed pr';
@@ -53,93 +100,127 @@
 <svelte:head><title>Activity · Beacon</title></svelte:head>
 
 <div class="page">
+
+	<!-- ── Header ────────────────────────────────────────────────────────── -->
 	<header>
 		<div class="header-left">
 			<h1>Activity</h1>
-			{#if username && !loading}
-				<a
-					class="handle"
-					href="https://github.com/{username}"
-					target="_blank"
-					rel="noopener"
-				>@{username}</a>
+			{#if ghUsername && !ghLoading}
+				<a class="handle" href="https://github.com/{ghUsername}" target="_blank" rel="noopener">
+					@{ghUsername}
+				</a>
 			{/if}
 		</div>
-		<button class="refresh-btn" on:click={load} disabled={loading} title="Refresh">
-			<span class="refresh-icon" class:spin={loading}>↻</span>
+		<button
+			class="refresh-btn"
+			on:click={() => { loadContributions(); loadActivity(); }}
+			disabled={ghLoading || lcLoading || activityLoading}
+			title="Refresh"
+		>
+			<span class="refresh-icon" class:spin={ghLoading || lcLoading || activityLoading}>↻</span>
 		</button>
 	</header>
 
-	{#if loading}
-		<div class="feed">
-			{#each Array(10) as _, i}
-				<div class="skeleton" style="animation-delay: {i * 0.04}s">
-					<div class="sk-bar"></div>
-					<div class="sk-body">
-						<div class="sk-top">
-							<div class="sk-line" style="width: 80px"></div>
-							<div class="sk-line" style="width: 50px"></div>
-						</div>
-						<div class="sk-line" style="width: {60 + Math.random() * 30}%"></div>
-						<div class="sk-line" style="width: 60px; margin-top: 2px"></div>
-					</div>
-				</div>
-			{/each}
-		</div>
+	<!-- ── Contribution Charts ───────────────────────────────────────────── -->
+	<section class="charts">
+		<ContributionChart
+			weeks={ghWeeks}
+			total={ghTotal}
+			label="GitHub"
+			baseColor="#f5a623"
+			loading={ghLoading}
+			error={ghError}
+		/>
+		<ContributionChart
+			weeks={lcWeeks}
+			total={lcTotal}
+			label="LeetCode"
+			baseColor="#5ce08a"
+			loading={lcLoading}
+			error={lcError}
+		/>
+		{#if lcStreak > 0}
+			<div class="lc-stats">
+				<span class="stat-pill">🔥 {lcStreak} day streak</span>
+			</div>
+		{/if}
+	</section>
 
-	{:else if error}
-		<div class="empty-state">
-			<span class="empty-icon">⚠</span>
-			<p>{error}</p>
-		</div>
+	<!-- ── Activity Feed ─────────────────────────────────────────────────── -->
+	<section class="feed-section">
+		<h2 class="section-title">Recent Events</h2>
 
-	{:else if items.length === 0}
-		<div class="empty-state">
-			<span class="empty-icon">◎</span>
-			<p>No recent activity found.</p>
-		</div>
-
-	{:else}
-		<div class="feed">
-			{#each items as item, i}
-				<a
-					class="feed-item"
-					href={item.url}
-					target="_blank"
-					rel="noopener"
-					style="--c: {accentFor(item)}; animation-delay: {i * 0.035}s"
-				>
-					<div class="item-bar"></div>
-					<div class="item-body">
-						<div class="item-top">
-							<div class="item-left">
-								<span class="repo-name">{item.repo}</span>
-								<span class="event-label" style="color: var(--c)">{labelFor(item)}</span>
+		{#if activityLoading}
+			<div class="feed">
+				{#each Array(10) as _, i}
+					<div class="skeleton" style="animation-delay: {i * 0.04}s">
+						<div class="sk-bar"></div>
+						<div class="sk-body">
+							<div class="sk-top">
+								<div class="sk-line" style="width: 80px"></div>
+								<div class="sk-line" style="width: 50px"></div>
 							</div>
-							<span class="item-time">{item.time}</span>
-						</div>
-						<p class="item-title">{item.title}</p>
-						<div class="item-foot">
-							{#if item.type === 'commit'}
-								<code class="sha">{item.meta}</code>
-							{:else if item.number}
-								<code class="sha">#{item.number}</code>
-							{/if}
+							<div class="sk-line" style="width: {55 + (i * 7) % 30}%"></div>
+							<div class="sk-line short"></div>
 						</div>
 					</div>
-					<span class="arrow" aria-hidden="true">↗</span>
-				</a>
-			{/each}
-		</div>
-	{/if}
+				{/each}
+			</div>
+
+		{:else if activityError}
+			<div class="empty-state">
+				<span class="empty-icon">⚠</span>
+				<p>{activityError}</p>
+			</div>
+
+		{:else if activityItems.length === 0}
+			<div class="empty-state">
+				<span class="empty-icon">◎</span>
+				<p>No recent activity found.</p>
+			</div>
+
+		{:else}
+			<div class="feed">
+				{#each activityItems as item, i}
+					<a
+						class="feed-item"
+						href={item.url}
+						target="_blank"
+						rel="noopener noreferrer"
+						style="--c: {accentFor(item)}; animation-delay: {i * 0.03}s"
+					>
+						<div class="item-bar"></div>
+						<div class="item-body">
+							<div class="item-top">
+								<div class="item-left">
+									<span class="repo-name">{item.repo}</span>
+									<span class="event-label" style="color: {accentFor(item)}">{labelFor(item)}</span>
+								</div>
+								<span class="item-time">{item.time}</span>
+							</div>
+							<p class="item-title">{item.title}</p>
+							<div class="item-foot">
+								{#if item.type === 'commit'}
+									<code class="sha">{item.meta}</code>
+								{:else if item.number}
+									<code class="sha">#{item.number}</code>
+								{/if}
+							</div>
+						</div>
+						<span class="arrow" aria-hidden="true">↗</span>
+					</a>
+				{/each}
+			</div>
+		{/if}
+	</section>
 </div>
 
 <style>
 	.page {
-		max-width: 720px;
+		max-width: 780px;
 		display: flex;
 		flex-direction: column;
-		gap: 28px;
+		gap: 36px;
 	}
 
 	header {
@@ -196,17 +277,49 @@
 		cursor: not-allowed;
 	}
 
-	.refresh-icon {
-		display: inline-block;
-		transition: transform 0.3s;
+	.refresh-icon { display: inline-block; }
+	.refresh-icon.spin { animation: spin 0.8s linear infinite; }
+	@keyframes spin { to { transform: rotate(360deg); } }
+
+	/* ── Charts ───────────────────────────────────────────────────────────── */
+
+	.charts {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+		animation: fadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.05s both;
 	}
 
-	.refresh-icon.spin {
-		animation: spin 0.8s linear infinite;
+	.lc-stats {
+		display: flex;
+		gap: 10px;
 	}
 
-	@keyframes spin {
-		to { transform: rotate(360deg); }
+	.stat-pill {
+		font-size: 12px;
+		font-weight: 500;
+		color: var(--text-muted);
+		background: var(--surface);
+		border: 1px solid var(--border);
+		border-radius: 100px;
+		padding: 3px 12px;
+	}
+
+	/* ── Section ──────────────────────────────────────────────────────────── */
+
+	.feed-section {
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+		animation: fadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+	}
+
+	.section-title {
+		font-size: 13px;
+		font-weight: 600;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--text-muted);
 	}
 
 	/* ── Feed ─────────────────────────────────────────────────────────────── */
@@ -214,8 +327,7 @@
 	.feed {
 		display: flex;
 		flex-direction: column;
-		gap: 8px;
-		animation: fadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.06s both;
+		gap: 6px;
 	}
 
 	.feed-item {
@@ -237,24 +349,21 @@
 		text-decoration: none;
 	}
 
-	.feed-item:hover .arrow {
-		opacity: 1;
-	}
+	.feed-item:hover .arrow { opacity: 1; }
 
 	.item-bar {
 		width: 3px;
 		flex-shrink: 0;
 		background: var(--c);
-		border-radius: 3px 0 0 3px;
 		opacity: 0.85;
 	}
 
 	.item-body {
 		flex: 1;
-		padding: 13px 16px;
+		padding: 12px 16px;
 		display: flex;
 		flex-direction: column;
-		gap: 5px;
+		gap: 4px;
 		min-width: 0;
 	}
 
@@ -300,7 +409,6 @@
 	.item-title {
 		font-size: 14px;
 		color: var(--text);
-		font-weight: 450;
 		line-height: 1.4;
 		white-space: nowrap;
 		overflow: hidden;
@@ -327,7 +435,7 @@
 		position: absolute;
 		top: 12px;
 		right: 14px;
-		font-size: 14px;
+		font-size: 13px;
 		color: var(--text-muted);
 		opacity: 0;
 		transition: opacity 0.15s;
@@ -345,34 +453,30 @@
 		animation: fadeUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
 	}
 
-	.sk-bar {
-		width: 3px;
-		background: var(--border);
-	}
+	.sk-bar { width: 3px; background: var(--border); }
 
 	.sk-body {
 		flex: 1;
-		padding: 13px 16px;
+		padding: 12px 16px;
 		display: flex;
 		flex-direction: column;
 		gap: 8px;
 	}
 
-	.sk-top {
-		display: flex;
-		gap: 10px;
-	}
+	.sk-top { display: flex; gap: 10px; }
 
 	.sk-line {
-		height: 12px;
+		height: 11px;
 		border-radius: 4px;
 		background: var(--surface-2);
 		animation: shimmer 1.6s ease-in-out infinite;
 	}
 
+	.sk-line.short { width: 55px; }
+
 	@keyframes shimmer {
-		0%, 100% { opacity: 0.4; }
-		50% { opacity: 0.8; }
+		0%, 100% { opacity: 0.35; }
+		50% { opacity: 0.75; }
 	}
 
 	/* ── Empty / Error ────────────────────────────────────────────────────── */
@@ -382,12 +486,9 @@
 		flex-direction: column;
 		align-items: center;
 		gap: 12px;
-		padding: 60px 0;
+		padding: 48px 0;
 		color: var(--text-muted);
 	}
 
-	.empty-icon {
-		font-size: 32px;
-		opacity: 0.5;
-	}
+	.empty-icon { font-size: 28px; opacity: 0.5; }
 </style>

@@ -96,6 +96,7 @@ async def _fetch_problem_detail(slug: str, client: httpx.AsyncClient) -> dict:
     query = """
     query questionData($titleSlug: String!) {
       question(titleSlug: $titleSlug) {
+        questionFrontendId
         difficulty
         topicTags { name }
       }
@@ -110,11 +111,12 @@ async def _fetch_problem_detail(slug: str, client: httpx.AsyncClient) -> dict:
         )
         q = r.json().get("data", {}).get("question") or {}
         return {
+            "number": q.get("questionFrontendId", "?"),
             "difficulty": q.get("difficulty", "Unknown"),
             "topics": [t["name"] for t in (q.get("topicTags") or [])],
         }
     except Exception:
-        return {"difficulty": "Unknown", "topics": []}
+        return {"number": "?", "difficulty": "Unknown", "topics": []}
 
 
 async def generate_daily_lc():
@@ -134,32 +136,49 @@ async def generate_daily_lc():
             for s in subs[:20]:
                 details[s["titleSlug"]] = await _fetch_problem_detail(s["titleSlug"], client)
 
+        diff_icon = {"Easy": "🟢", "Medium": "🟡", "Hard": "🔴"}
+
+        rows = []
+        for s in subs:
+            d = details.get(s["titleSlug"], {})
+            difficulty = d.get("difficulty", "Unknown")
+            topics = d.get("topics", [])
+            icon = diff_icon.get(difficulty, "⚪")
+            num = d.get("number", "?")
+            solved_at = datetime.fromtimestamp(int(s["timestamp"]), tz=IST).strftime("%H:%M IST")
+            rows.append((num, s["title"], s["titleSlug"], icon, difficulty, topics, solved_at))
+
+        table_lines = [
+            "| # | Problem | Difficulty | Topics | Solved At |",
+            "|---|---------|-----------|--------|-----------|",
+        ]
+        for num, title, slug, icon, diff, topics, solved_at in rows:
+            topics_str = ", ".join(topics) if topics else "—"
+            link = f"[{num}. {title}](https://leetcode.com/problems/{slug}/)"
+            table_lines.append(f"| {num} | {link} | {icon} {diff} | {topics_str} | {solved_at} |")
+
+        easy = sum(1 for *_, d, _, _ in rows if d == "Easy")
+        medium = sum(1 for *_, d, _, _ in rows if d == "Medium")
+        hard = sum(1 for *_, d, _, _ in rows if d == "Hard")
+
         lines = [
             f"# LeetCode Daily Log — {today.isoformat()}",
             "",
-            f"**Problems Solved**: {len(subs)}",
+            f"**{len(subs)} solved** · 🟢 {easy} Easy · 🟡 {medium} Medium · 🔴 {hard} Hard",
+            "",
+            *table_lines,
             "",
             "---",
             "",
         ]
 
-        diff_icon = {"Easy": "🟢", "Medium": "🟡", "Hard": "🔴"}
-
-        for i, s in enumerate(subs, 1):
-            solved_at = datetime.fromtimestamp(int(s["timestamp"]), tz=IST).strftime("%H:%M IST")
-            d = details.get(s["titleSlug"], {})
-            difficulty = d.get("difficulty", "Unknown")
-            topics = d.get("topics", [])
-            icon = diff_icon.get(difficulty, "⚪")
-
+        for i, (num, title, slug, icon, diff, topics, solved_at) in enumerate(rows, 1):
+            topics_str = ", ".join(topics) if topics else "—"
             lines += [
-                f"## {i}. {s['title']} {icon} {difficulty}",
+                f"## {i}. #{num} {title}  {icon} {diff}",
+                f"- **Topics**: {topics_str}",
                 f"- **Solved at**: {solved_at}",
-            ]
-            if topics:
-                lines.append(f"- **Topics**: {', '.join(topics)}")
-            lines += [
-                f"- **Link**: https://leetcode.com/problems/{s['titleSlug']}/",
+                f"- **Link**: https://leetcode.com/problems/{slug}/",
                 "",
             ]
 
@@ -188,15 +207,15 @@ def ensure_backup_repo():
 def init_scheduler():
     global _scheduler
     _scheduler = AsyncIOScheduler(timezone="Asia/Kolkata")
-    _scheduler.add_job(auto_backup, IntervalTrigger(hours=6), id="backup_tracker", replace_existing=True)
     _scheduler.add_job(
-        generate_daily_lc,
-        CronTrigger(hour=23, minute=0, timezone="Asia/Kolkata"),
-        id="lc_daily",
+        auto_backup,
+        CronTrigger(hour=0, minute=0, timezone="Asia/Kolkata"),
+        id="backup_tracker",
         replace_existing=True,
     )
+    _scheduler.add_job(generate_daily_lc, IntervalTrigger(hours=6), id="lc_daily", replace_existing=True)
     _scheduler.start()
-    log.info("Scheduler started — backup every 6h, LC summary at 23:00 IST")
+    log.info("Scheduler started — tracker backup at 00:00 IST, LC log every 6h")
 
 
 def shutdown_scheduler():

@@ -90,3 +90,19 @@ def remove_tracker(company_id: str):
     del tracker["companies"][company_id]
     _save_tracker(tracker)
     return {"ok": True}
+
+
+# ── Manual triggers ───────────────────────────────────────────────────────────
+
+@router.post("/backup/trigger")
+async def trigger_backup():
+    from scheduler import auto_backup
+    await auto_backup()
+    return {"ok": True, "job": "backup_tracker"}
+
+
+@router.post("/lc/trigger")
+async def trigger_lc():
+    from scheduler import generate_daily_lc
+    await generate_daily_lc()
+    return {"ok": True, "job": "lc_daily"}

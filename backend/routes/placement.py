@@ -106,3 +106,10 @@ async def trigger_lc():
     from scheduler import generate_daily_lc
     await generate_daily_lc()
     return {"ok": True, "job": "lc_daily"}
+
+
+@router.post("/lc/poll")
+async def trigger_lc_poll():
+    from scheduler import poll_lc
+    await poll_lc()
+    return {"ok": True, "job": "lc_poll"}

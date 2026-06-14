@@ -22,6 +22,11 @@ LC_USERNAME = "sanjaydinesh"
 
 _scheduler: AsyncIOScheduler | None = None
 
+# Tracks the highest submission timestamp we've already committed to the log.
+# Resets to 0 on backend restart (intentional — we re-generate on startup if
+# there are any solves today, which keeps the log correct after crashes).
+_last_processed_ts: int = 0
+
 
 def _get_github():
     token = config.require("GITHUB_TOKEN")
@@ -51,7 +56,7 @@ def _commit_file(repo, path: str, content: str, message: str):
 
 
 async def auto_backup():
-    """Commit tracker.json to the backup repo. Runs every 6 hours."""
+    """Commit tracker.json to the backup repo. Runs daily at midnight IST."""
     try:
         g = _get_github()
         _, repo = _get_repo(g)
@@ -92,6 +97,16 @@ async def _fetch_lc_submissions_today() -> list[dict]:
     return [s for s in all_subs if int(s["timestamp"]) >= cutoff_ts]
 
 
+def _deduplicate_subs(subs: list[dict]) -> list[dict]:
+    """One entry per problem per day — keep the submission with the latest timestamp."""
+    best: dict[str, dict] = {}
+    for s in subs:
+        slug = s["titleSlug"]
+        if slug not in best or int(s["timestamp"]) > int(best[slug]["timestamp"]):
+            best[slug] = s
+    return sorted(best.values(), key=lambda s: int(s["timestamp"]))
+
+
 async def _fetch_problem_detail(slug: str, client: httpx.AsyncClient) -> dict:
     query = """
     query questionData($titleSlug: String!) {
@@ -120,12 +135,14 @@ async def _fetch_problem_detail(slug: str, client: httpx.AsyncClient) -> dict:
 
 
 async def generate_daily_lc():
-    """Fetch today's LeetCode activity and commit a dated markdown to the backup repo."""
+    """Fetch today's LC solves (deduplicated), commit a dated markdown to the backup repo."""
+    global _last_processed_ts
     today = date.today()
     today_ist = datetime.now(IST)
 
     try:
-        subs = await _fetch_lc_submissions_today()
+        raw_subs = await _fetch_lc_submissions_today()
+        subs = _deduplicate_subs(raw_subs)
 
         if not subs:
             log.info("LC daily: no problems solved today (%s), skipping commit", today)
@@ -164,7 +181,7 @@ async def generate_daily_lc():
         lines = [
             f"# LeetCode Daily Log — {today.isoformat()}",
             "",
-            f"**{len(subs)} solved** · 🟢 {easy} Easy · 🟡 {medium} Medium · 🔴 {hard} Hard",
+            f"**{len(rows)} solved** · 🟢 {easy} Easy · 🟡 {medium} Medium · 🔴 {hard} Hard",
             "",
             *table_lines,
             "",
@@ -188,10 +205,30 @@ async def generate_daily_lc():
         g = _get_github()
         _, repo = _get_repo(g)
         path = f"lc-daily/{today.isoformat()}.md"
-        _commit_file(repo, path, content, f"lc: {today.isoformat()} ({len(subs)} solved)")
-        log.info("LC daily committed: %s (%d problems)", today, len(subs))
+        _commit_file(repo, path, content, f"lc: {today.isoformat()} ({len(rows)} solved)")
+        log.info("LC daily committed: %s (%d problems)", today, len(rows))
+
+        # Advance the watermark so the poll job knows we're up to date
+        if subs:
+            _last_processed_ts = max(int(s["timestamp"]) for s in subs)
+
     except Exception as e:
         log.error("LC daily failed: %s", e)
+
+
+async def poll_lc():
+    """Check for new accepted submissions every 5 min; regenerate the log if found."""
+    global _last_processed_ts
+    try:
+        subs = await _fetch_lc_submissions_today()
+        if not subs:
+            return
+        latest_ts = max(int(s["timestamp"]) for s in subs)
+        if latest_ts > _last_processed_ts:
+            log.info("LC poll: new submission detected (ts=%d), regenerating log", latest_ts)
+            await generate_daily_lc()
+    except Exception as e:
+        log.error("LC poll failed: %s", e)
 
 
 def ensure_backup_repo():
@@ -207,15 +244,23 @@ def ensure_backup_repo():
 def init_scheduler():
     global _scheduler
     _scheduler = AsyncIOScheduler(timezone="Asia/Kolkata")
+
+    # Tracker backup — daily at midnight IST
     _scheduler.add_job(
         auto_backup,
         CronTrigger(hour=0, minute=0, timezone="Asia/Kolkata"),
         id="backup_tracker",
         replace_existing=True,
     )
+
+    # LC poll — every 5 minutes, triggers log regeneration on new solve
+    _scheduler.add_job(poll_lc, IntervalTrigger(minutes=5), id="lc_poll", replace_existing=True)
+
+    # LC safety regeneration — every 6 hours regardless of poll state
     _scheduler.add_job(generate_daily_lc, IntervalTrigger(hours=6), id="lc_daily", replace_existing=True)
+
     _scheduler.start()
-    log.info("Scheduler started — tracker backup at 00:00 IST, LC log every 6h")
+    log.info("Scheduler started — tracker backup at 00:00 IST, LC poll every 5min, LC regen every 6h")
 
 
 def shutdown_scheduler():
